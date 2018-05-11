@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Titulo de la pestaña-->
+        <title>Guggenheim Bilbao</title>
+        <meta charset="utf-8">
+        <!-- Palabras clave para el buscador-->   
+        <meta name="keywords" content="Museo, Guggenheim, Bilbao, arte">
+        <!-- Descripcion de la web -->
+        <meta name="description" content="Página Web del Museo Guggenheim Bilbao">
+        <!-- Autores de la web -->
+        <meta name="author" content="Emilio, Eric">
+        <!-- Favicon de la web-->
+        <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+        <!-- Estilo css de la pagina -->
+        <link rel="stylesheet" type="text/css" href="css/style.css"/> 
+    </head>
+    <body>
+        <!-- Header con el logo e imagen de fondo -->
+        <header id="logo">
+            <img src="img/logo.jpg" alt="logo">
+            <h1>Guggenheim Bilbao</h1>
+        </header>
+        <!-- Menu Horizontal-->
+        <nav id="menu">
+            <ul>
+        	    <li><a href="index.html">Inicio</a></li>
+        	    <li><a href="">Obras</a>
+                    <!-- Menu desplegable con las obras -->
+                    <ul>
+                        <li><a href="obras/obra.html">24 Cabezas</a></li>
+                        <li><a href="obras/VillaBorghese.html">Villa Borghese</a></li>
+                        <li><a href="obras/Caja_metafisica.html">Caja Metafisica</a></li>
+                        <li><a href="obras/antropometriaazul.html">Antropometría azul</a></li>
+                    </ul>
+                </li>
+        	    <li><a>Artistas</a>
+        	    <li><a href="">Entradas</a></li>
+        	</ul>
+        </nav>
+        <!-- Contenedor principal -->
+        <div id="main">
+            <!-- Enlaces laterales auxiliares -->
+            <aside id="aux"> 
+                <!-- Enlace a la fundación Guggenheim -->
+                <a target="_blank" href="https://www.guggenheim.org/foundation">    
+                    <div id="fundacion">
+                        <p>Fundación Solomon Guggenheim</p>    
+                    </div>
+                </a>
+                <!-- Enlace al Guggenheim New York -->
+                <a target="_blank" href="https://www.guggenheim.org/">    
+                    <div id="NY">
+                        <p>Guggenheim New York</p>    
+                    </div>
+                </a>
+                <!-- Enlace al Guggenheim Venecia -->
+                <a target="_blank" href="http://www.guggenheim-venice.it/default.html">    
+                    <div id="venecia">
+                        <p>Guggenheim Venecia</p>    
+                    </div>
+                </a>
+                <!-- Enlace a informacion adicional de Wikipedia -->
+                <a target="_blank" href="https://es.wikipedia.org/wiki/Museo_Guggenheim_Bilbao">    
+                    <div id="wiki">
+                        <p>Wikipedia</p>    
+                    </div>
+                </a>
+            </aside>
+            <!-- Contendor con las obras de index-->
+            <div id="obras">
+                <!-- 24 cabezas -->
+	            <div class="contenedor_obra">	
+	            	<a href="obras/obra.html"><img src="img/Sauracabezas1.jpg" alt="24 Cabezas"></a>
+	            	<p>24 cabezas</p>
+	            </div>	
+                <!-- Villa Borghese -->
+                <div class="contenedor_obra">
+                	<a href="obras/VillaBorghese.html"><img src="img/De-Kooning.jpg" alt="Villa Borghese"></a>
+                	<p>Villa Borghese</p>
+                </div>
+                <!-- Caja Metafisica -->
+                <div class="contenedor_obra">	
+                	<a href="obras/Caja_metafisica.html"><img src="img/Oteiza-Homenaje-a-Leonardo.jpg" alt="Caja Metafisica"></a>
+                	<p>Caja Metafísica</p>
+                </div>
+                <!-- Antropometria Azul -->
+                <div class="contenedor_obra">
+                	<a href="obras/antropometriaazul.html"><img src="img/Antropometriaazul.jpg" alt="Antropometria Azul"></a>
+                	<p>Antropometria Azul</p>
+            	</div>
+            </div>   
+        </div>
+        <footer>
+            <!-- Información de contacto -->
+            <div id="contacto">
+                <h1> Contacto</h1>
+                <p>Dirección: Avenida Abandoibarra, 2 48009 Bilbao</p>
+                <p>Teléfono: 944 35 90 00 (Horario oficinas)</p>
+                <p>Teléfono: 944 35 90 80 (Horario Museo)</p>   
+            </div>
+            <!-- Información de copyright-->
+            <div id="copyright">
+                <p>Copyright © Todos los derechos reservados - Sitio creado por Emilio y Eric</p>
+            </div>
+        </footer>
+    </body>
+</html>

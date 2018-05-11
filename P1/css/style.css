@@ -1,0 +1,328 @@
+
+body{
+    margin: 0;
+    width: 974px;
+    margin: auto;
+    background-image: url("../img/background.png");
+    background-repeat: round;
+    border-color: #333;
+    font-family: verdana;   
+}
+
+/************************************/
+/* ------------ Header ------------ */
+/************************************/
+header h1{
+    color: white;
+    float: right;
+    font-family: "Arial";
+    font-style: italic;
+    font-size: 38px;
+    margin-top: 6px;
+}
+#logo{
+    
+    padding-left: 29px;
+    padding-right: 29px;
+    background-image: url("../img/header.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 896px;
+    height: 215px;
+    border-left: solid 10px;
+    border-right: solid 10px;
+    border-color: #333;
+}
+
+
+/************************************/
+/*-------------- MENU --------------*/
+/************************************/
+
+#menu {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+
+}
+ /* Lista para el menu*/
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+
+li {
+    float: left;
+    width: 25%;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 18px 16px;
+    text-decoration: none;
+}
+
+/* Cambia de color al pasar el ratón por encima */
+li:hover {
+    background-color: #4caf50;
+}
+
+
+/* Sub-menu de Obras oculto */
+li ul {
+    display:none;
+    position:absolute;
+    width:243px;
+}
+
+/* Muestra el menu oculto al pasar el ratón por encima */            
+li:hover ul {    
+    display:block;
+}
+
+/* Muestra el menu vertical */
+li ul li{
+    position: relative;
+    float: none;
+    width: auto;
+}
+
+
+/************************************/
+/* ----------- CUERPO -------------*/
+/************************************/
+
+/* Propiedades del contenedor principal */
+#main {
+    display: table;
+    background-color:#F1F1EF;
+    font-size: 14px;
+    width: 98%;
+    border-left: solid 10px;
+    border-right: solid 10px;
+    border-color: #333;
+    padding-bottom: 15px;
+}
+
+/* Propiedades de la columna izquierda */
+#main #aux {
+    width: 25%;
+    float: left;
+    clear: both;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+   
+
+#main #aux a{
+    
+    text-decoration: none;
+    text-align: right; 
+}
+
+#main #aux p{
+    padding-right: 10px;
+    padding-top: 65px;
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+
+}  
+
+/* Propiedades de los enlaces a otros museos */
+#main #aux #fundacion{
+
+    height: 100px;
+    width: 80%;
+    background-color: black;
+}
+
+#main #aux #NY{
+    height: 100px;
+    width: 80%;
+    background-color: #2980B9;
+}
+
+#main #aux #venecia{
+    height: 100px;
+    width: 80%;
+    background-color:#E67E22;
+}
+
+#main #aux #wiki{
+    height: 100px;
+    width: 80%;
+    background-color: #B03A2E;
+}
+
+
+/* Propiedades del contenedor principal de las obras en index */
+#main #obras{
+    width: 75%;
+    float: left;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+
+/*Propiedades del contenedor que contiene la obra y el titulo */
+#main #obras .contenedor_obra{
+    width: 32%;
+    height: 280px;
+    float: left;
+    padding-bottom: 5px;
+}
+
+#main #obras .contenedor_obra img{
+    height: 230px;
+    width: 210px;
+    margin-right: 9px;
+    margin-top: 15px;
+    border: solid 3px #C5C5B5;
+}
+
+#main #obras .contenedor_obra p{
+    font-size: 11px;
+    margin-top: 5px;
+    text-align: center;
+}
+
+/************************************/
+/* ----------- Footer -------------*/
+/************************************/
+
+footer {
+    background-color: #333;
+    color: white;  
+    padding: 10px;
+    width: 98%;
+    font-size: 14px;
+}
+
+footer #contacto p{
+    padding-left: 19px;
+    font-size: 12px;
+}
+
+footer #contacto h1{
+    font-size: 16px;
+    margin-left: 15px;
+    border-bottom: 2px solid white;
+    width: 30%;
+    padding-bottom: 5px;
+}
+
+
+footer #copyright{
+    text-align: center;
+    color: white ;
+    font-size: 10px;
+    padding-top: 5px;
+}
+
+
+/*****************************************************************************/
+/*****************************************************************************/
+                                /* Obras.html */
+/*****************************************************************************/
+/*****************************************************************************/
+
+/* Propiedades de los enlaces auxiliares */
+
+#main #aux #biografia{
+
+    height: 100px;
+    width: 80%;
+    background-color: #A4D6F0;
+    border-left: solid 8px #2196F3;
+}
+
+
+#main #aux #web{
+    height: 100px;
+    width: 80%;
+    background-color: #D2EE95;
+    border-left: solid 8px #A9F10A;
+}
+
+
+#main #aux #biografia p{
+    color: black;
+}
+
+#main #aux #web p{
+    color: black;
+}
+
+
+/* Propiedades de la desripción de la obra */
+#main #descripcion {
+    width: 75%;
+    float: left;
+    padding-top: 40px;
+    padding-bottom: 5px;
+}
+
+#main #descripcion h2{
+    border-bottom: solid 2px black;
+    width: 55%;
+}
+
+#main #descripcion h3{
+    margin-top: -8px;
+}
+#main #descripcion h4{
+    margin-top: -13px;
+    margin-bottom: 25px;
+}
+#main #descripcion #foto{
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 5px;
+    float: right;
+}
+
+#main #descripcion #foto img{
+    height: 280px;
+    width: 280px;
+}
+
+#main #descripcion #foto p{
+    font-size: 10px;
+    text-align: right;
+    margin-top: 0px;
+    margin-right: 15px;
+} 
+
+#main #descripcion #foto #fuente{
+    margin-top: -6px;
+    margin-bottom: 15px;
+}
+#main #descripcion #foto img:hover{ 
+    -webkit-transform: scale(1.9);
+    -moz-transform: scale(1.9);
+    transform: scale(1.9);
+}
+
+
+/* Propiedades de los botones para compartir */
+#botonessociales {
+    padding-right: 10px;
+}
+
+#botonessociales img{
+    float: right;
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+}
+
+
+

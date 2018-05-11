@@ -1,0 +1,71 @@
+
+body{
+    margin: 0;
+    width: 974px;
+    margin: auto;
+    font-family: Arial;   
+}
+
+/*****************************************************************************/
+/*****************************************************************************/
+                            /* imprimir_Obras.html */
+/*****************************************************************************/
+/*****************************************************************************/
+#logo{
+    float:right;
+    margin: 20px;
+    width: auto;
+}
+
+#logo img{
+    width: 110px;
+    height: 10  0px;
+}
+/* Propiedades del texto para imprimir */
+#texto_imprimir{
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    border: solid 3px black;
+    padding: 40px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    clear: both;
+    height: auto;
+}
+
+#texto_imprimir h2{
+    border-bottom: solid 2px black;
+    width: 55%;
+}
+
+#texto_imprimir h3{
+    margin-top: -8px;
+}
+#texto_imprimir h4{
+    margin-top: -13px;
+    margin-bottom: 25px;
+}
+
+#texto_imprimir #right_col{
+    float: right;
+    width: 45%;
+}
+
+#texto_imprimir #left_col{
+    float: left;
+    width: 45%;
+}
+
+
+#texto_imprimir img{
+    height: 100%;
+    width: 100%;
+}
+
+
+#copyright{
+    text-align: center;
+    margin: 30px;
+    font-size: 12px;
+}
