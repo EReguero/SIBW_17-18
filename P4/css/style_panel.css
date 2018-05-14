@@ -1,0 +1,108 @@
+
+    body{
+        margin: 0;
+        width: 974px;
+        margin: auto;
+        background-color: #CACACA;
+        background-repeat: round;
+        border-color: #333;
+        font-family: verdana;   
+    }
+
+    /************************************/
+    /* ------------ Header ------------ */
+    /************************************/
+    header h1{
+        color: grey;
+        float: right;
+        font-family: "Arial";
+        font-style: italic;
+        font-size: 38px;
+        margin-top: 6px;
+    }
+
+    header h2{
+        color: grey;
+        float: right;
+        padding-top: 90px;
+        font-family: "Arial";
+        font-size: 28px;
+        font-style: italic;
+        text-decoration: underline;
+        margin-top: 6px;
+    }
+
+    #logo{
+        
+        padding-left: 29px;
+        padding-right: 29px;
+        background-color:white;
+        width: 896px;
+        height: 175px;
+        border-left: solid 10px;
+        border-right: solid 10px;
+        border-bottom: solid 10px;
+        border-color: #333;
+    }
+
+    #panel {
+        display: table;
+        background-color: white;
+        font-size: 14px;
+        width: 98%;
+        border-left: solid 10px;
+        border-right: solid 10px;
+        border-bottom: solid 10px;
+        border-color: #333;
+        height: 450px;
+        max-height: 600px;
+        overflow: hidden;
+    }
+
+    #panel #main{
+        width: 70%;
+        float: left;
+    }
+
+    #panel #informacion{
+        border-bottom: solid 10px;
+        border-color: #333;
+        background-color: #333;
+        padding-top: 1px;
+
+    }
+
+    #panel #informacion p{
+        color: white;
+        margin-left: 35px;
+    }
+
+    #panel #menu {
+        width: 20%;
+        float: left;
+        padding-top: 20px;
+        border-right: solid 10px;
+        border-color: #333; 
+        height: 100%;
+        margin-left: -10px;
+    }
+
+    #panel #menu li{
+        list-style: none;
+        margin-top :25px;
+    }
+
+    #panel #menu a{
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 12px;
+    }
+    
+    #panel #menu a:link{
+        color: #333;
+    }
+
+     #panel #menu a:visited{
+        color: #333;
+    }
+

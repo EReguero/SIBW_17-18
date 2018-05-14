@@ -1,0 +1,615 @@
+
+    body{
+        margin: 0;
+        width: 974px;
+        margin: auto;
+        background-color: #CACACA;
+        background-repeat: round;
+        border-color: #333;
+        font-family: verdana;   
+    }
+
+    /************************************/
+    /* ------------ Header ------------ */
+    /************************************/
+    header h1{
+        color: white;
+        float: right;
+        font-family: "Arial";
+        font-style: italic;
+        font-size: 38px;
+        margin-top: 6px;
+    }
+
+    #logo{
+        
+        padding-left: 29px;
+        padding-right: 29px;
+        background-image: url("../img/header.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 896px;
+        height: 215px;
+        border-left: solid 10px;
+        border-right: solid 10px;
+        border-color: #333;
+    }
+
+
+    /************************************/
+    /*-------------- MENU --------------*/
+    /************************************/
+
+    #menu {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+
+    }
+     /* Lista para el menu*/
+
+    ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+    }
+
+
+    li {
+        float: left;
+        width: 20%;
+    }
+
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 18px 16px;
+        text-decoration: none;
+    }
+
+    /* Cambia de color al pasar el ratón por encima */
+    li:hover {
+        background-color: #4caf50;
+    }
+
+
+    /* Sub-menu de Obras oculto */
+    li ul {
+        display:none;
+        position:absolute;
+        max-width:243px;
+        width: auto;
+        min-width: 194px;
+        max-height: 400PX;
+        height: auto;
+        overflow-y: auto;
+    }
+
+    /* Muestra el menu oculto al pasar el ratón por encima */            
+    li:hover ul {    
+        display:block;
+    }
+
+    /* Muestra el menu vertical */
+    li ul li{
+        position: relative;
+        float: none;
+        width: auto;
+
+    }
+
+
+    /************************************/
+    /* ----------- CUERPO -------------*/
+    /************************************/
+
+    /* Propiedades del contenedor principal */
+    #main {
+        display: table;
+        background-color:#F1F1EF;
+        font-size: 14px;
+        width: 98%;
+        border-left: solid 10px;
+        border-right: solid 10px;
+        border-color: #333;
+        padding-bottom: 15px;
+    }
+
+    /* Propiedades de la columna izquierda */
+    #main #aux {
+        width: 25%;
+        float: left;
+        clear: both;
+        padding-top: 40px;
+        padding-bottom: 20px;
+    }
+       
+
+    #main #aux a{
+        
+        text-decoration: none;
+        text-align: right; 
+    }
+
+    #main #aux p{
+        padding-right: 10px;
+        padding-top: 65px;
+        color: white;
+        font-weight: bold;
+        font-size: 12px;
+
+    }  
+
+    /* Propiedades de los enlaces a otros museos */
+    #main #aux #fundacion{
+
+        height: 100px;
+        width: 80%;
+        background-color: black;
+    }
+
+    #main #aux #NY{
+        height: 100px;
+        width: 80%;
+        background-color: #2980B9;
+    }
+
+    #main #aux #venecia{
+        height: 100px;
+        width: 80%;
+        background-color:#E67E22;
+    }
+
+    #main #aux #wiki{
+        height: 100px;
+        width: 80%;
+        background-color: #B03A2E;
+    }
+
+
+    /* Propiedades del contenedor principal de las obras en index */
+    #main #obras{
+        width: 75%;
+        float: left;
+        padding-top: 40px;
+        padding-bottom: 20px;
+    }
+
+
+    /*Propiedades del contenedor que contiene la obra y el titulo */
+    #main #obras .contenedor_obra{
+        width: 32%;
+        height: 280px;
+        float: left;
+        padding-bottom: 5px;
+    }
+
+    #main #obras .contenedor_obra img{
+        height: 230px;
+        width: 210px;
+        margin-right: 9px;
+        margin-top: 15px;
+        border: solid 3px #C5C5B5;
+    }
+
+    #main #obras .contenedor_obra p{
+        font-size: 11px;
+        margin-top: 5px;
+        text-align: center;
+    }
+
+    /*Propiedades de los contenedores de colecciones */
+    #colecciones {
+        text-align: center;
+        color: #333;
+        text-decoration: underline;
+    }
+
+     #main #obras .contenedor_colecciones{
+        width: 32%;
+        height: 280px;
+        float: left;
+        padding-bottom: 5px;
+    }
+
+    #main #obras .contenedor_colecciones img{
+        height: 230px;
+        width: 210px;
+        margin-right: 9px;
+        margin-top: 15px;
+        border: solid 3px #C5C5B5;
+    }
+
+    #main #obras .contenedor_colecciones p{
+        font-size: 11px;
+        margin-top: 5px;
+        text-align: center;
+    }
+
+    /************************************/
+    /* ----------- Footer -------------*/
+    /************************************/
+
+    footer {
+        background-color: #333;
+        color: white;  
+        padding: 10px;
+        width: 98%;
+        font-size: 14px;
+        height: 160px;
+    }
+    footer #contacto {
+        width: 50%;
+        float: left;
+    }
+    
+    footer #contacto p{
+        padding-left: 19px;
+        font-size: 12px;
+    }
+
+    footer #comollegar a{
+        padding-left: 19px;
+        font-size: 12px;
+    }
+    footer a:visited {
+        color: white;
+    }
+
+    footer h1{
+        font-size: 16px;
+        margin-left: 15px;
+        border-bottom: 2px solid white;
+        width: 30%;
+        padding-bottom: 5px;
+    }
+
+
+    footer #copyright{
+        text-align: center;
+        color: white ;
+        font-size: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        clear: both;
+       
+    }
+
+    footer #comollegar{
+        float: right;
+        width: 50%;
+    }
+
+    /*****************************************************************************/
+    /*****************************************************************************/
+                                    /* Obras.html */
+    /*****************************************************************************/
+    /*****************************************************************************/
+
+    /* Propiedades de los enlaces auxiliares */
+
+    #main #aux #biografia{
+
+        height: 100px;
+        width: 80%;
+        background-color: #A4D6F0;
+        border-left: solid 8px #2196F3;
+    }
+
+
+    #main #aux #web{
+        height: 100px;
+        width: 80%;
+        background-color: #D2EE95;
+        border-left: solid 8px #A9F10A;
+    }
+
+
+    #main #aux #biografia p{
+        color: black;
+    }
+
+    #main #aux #web p{
+        color: black;
+    }
+
+
+    /* Propiedades de la desripción de la obra */
+    #main #descripcion {
+        width: 75%;
+        float: left;
+        padding-top: 40px;
+        padding-bottom: 5px;
+    }
+
+    #main #descripcion h2{
+        border-bottom: solid 2px black;
+        width: 55%;
+    }
+
+    #main #descripcion h3{
+        margin-top: -8px;
+    }
+    #main #descripcion h4{
+        margin-top: -13px;
+        margin-bottom: 25px;
+    }
+
+    #main #fecha_creacion{
+        font-size: 10px;
+        color: black;
+        float: right;
+        padding-right: 10px;
+    }
+
+    #main #fechas{
+        width: 20%;
+        float: right;
+    }
+    #main #fecha_modificacion{
+        font-size: 10px;
+        color: black;
+        float: right;
+        padding-right: 10px;
+        margin-top: 1px;
+    }
+    #main #descripcion #foto{
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 5px;
+        float: right;
+    }
+
+    #main #descripcion #foto img{
+        height: 280px;
+        width: 280px;
+        display: block;
+    }
+
+    #main #descripcion #foto #hidden{
+        display: none;
+    }
+
+    .flecha_izquierda{
+        color: white;
+        background-color: #333;
+        border: none;
+        height: 35px;
+        width: 49%;
+
+
+    }
+
+    .flecha_derecha {
+        color: white;
+        background-color: #333;
+        border: none;
+        height: 35px;
+        width: 49%;
+        
+    }
+
+    #buttons_fl{
+        background-color: #333;
+        height: auto;
+    }
+
+    #main #descripcion #foto p{
+        font-size: 10px;
+        text-align: right;
+        margin-top: 10px;
+        margin-right: 15px;
+    } 
+
+    #main #descripcion #foto #fuente{
+        margin-top: -6px;
+        margin-bottom: 15px;
+    }
+    #main #descripcion #foto img:hover{ 
+        -webkit-transform: scale(1.9);
+        -moz-transform: scale(1.9);
+        transform: scale(1.9);
+    }
+
+    /* Comentarios de la obra */
+
+    #boton_comentarios{
+    	float: right;
+    	clear: both;
+    	border: none;
+    	margin-bottom: 15px;
+        margin-top: 60px;
+    	padding-right: 40px;
+    	padding-top: 15px;
+    	padding-bottom: 15px;
+    	padding-left: 10px;
+    	color:white;
+    	background-color: #333;
+        outline:0px;
+    }
+
+    #boton_comentarios:hover{
+    	background-color: #4caf50;
+    }
+
+    #main #box_comentarios{
+    	display: none;
+        position: absolute;
+        margin-left: 8px;
+        background-color: white;
+        border: solid 8px #4caf50;
+        width: 69%;
+        height: 80%;
+    }
+
+    /* Caja donde estan los comentarios */
+    #main #box_comentarios #comentarios{
+           overflow-y: auto;
+           height: 70%;
+           position: relative;
+    }
+
+
+    /* Comentario */
+    #comentarios .comentario{
+    	border-bottom: solid 8px #4caf50;
+        padding-left: 15px;
+    }
+
+    #box_comentarios .comentario .fecha{
+        font-size: 12px;
+        margin-top: -10px;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: solid 2px black;
+        width: 55%;
+        height: 75%;
+    }
+
+    #box_comentarios .comentario .nombre{
+    	color: black;
+        font-weight: bold;
+    }
+
+
+    /* Box de comentar */
+    #box_comentarios #comentar{
+        border-top: solid 18px #4caf50;
+        color: white;
+        background-color: #4caf50;
+        height: 28%;
+    }
+
+    #comentar input[type=text]:focus {
+        border: 3px solid #333;
+        outline:0px;
+    }
+
+    #comentar input{
+        margin: 10px;
+        padding-right: 10px;
+    }
+
+    #comentar label {
+        margin-left: 20px;
+    }
+
+
+    #entrada_texto{
+        width: 77%;
+        height: 70px;
+        overflow-y: auto;
+        resize: none;
+    }
+
+    #entrada_texto:focus{
+        border: 3px solid #333;
+        outline:0px;
+    }
+    
+    #crear_comentario{
+        height: 75px;
+        width:  18%;
+        float: right;
+        background-color: #333;
+        color: white;
+        border: none;
+        text-align: center;
+        margin-right: 25px;
+    }
+
+
+
+
+    /*********************************************/
+    /* Propiedades de los botones para compartir */
+    #botonessociales {
+        padding-right: 10px;
+        clear: both;
+    }
+
+    #botonessociales img{
+        float: right;
+        width: 30px;
+        height: 30px;
+        margin-right: 5px;
+    }
+
+
+
+    #entradas{
+        width: 98%;
+        padding :auto;
+        text-align: center;
+        margin: 22px;
+    }
+
+    #entradas #title{
+        text-decoration: underline;
+    }
+
+    #entradas tr{
+        border-bottom: solid 1px black ;
+    }
+
+    #entradas tr td{
+        max-width: 19%;
+        padding-top: 28px;
+
+    }
+
+    #comprar_entradas{
+        float: right;
+        margin-right: 40%;
+        margin-top: 20px;
+        text-align: center;
+        width: 200px;
+        height: 50px;
+        background: #4caf50;
+        color: white;
+        border: none;
+    }
+
+    #map {
+        float: right;
+        margin: auto;
+        padding-bottom: 20px;
+        padding-top: 20px;
+    } 
+
+    #map_Text{
+        float: left;
+        width: 35%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-left: 10px;
+        background-color: #F8F7F7;
+        text-align: center;
+        height: 450PX;
+    }
+    #comollegar_title{
+        text-align: center;
+        padding-top: 20px;
+        font-size: 15px;
+    }
+
+    #coordenadas{
+        font-size: 12px;
+        margin-top:-5px;
+         text-align: center
+    }
+
+    #bus_text{
+        float: left;
+        margin-top: 65px;
+    }
+
+    #bus_text p{
+        font-size: 12px;
+    }
+ 
+
+
