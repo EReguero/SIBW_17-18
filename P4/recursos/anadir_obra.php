@@ -1,6 +1,6 @@
 <?php
 ?>
- <form action="upload_obra.php" method="POST">                
+ <form action="upload_obra.php" enctype="multipart/form-data" method="POST">                
   <label for="titulo">Titulo: </label>
   <input type="text" name="titulo"><br><br>
   <label for="autor">Autor: </label>
@@ -18,7 +18,7 @@
   	?>
   </select><br><br>
   <label for="imagen">Imagen: </label>
-  <input type="file" name="imagen" accept="image/*"><br><br>
+  <input type="file" name="imagen"><br><br>
   <label for="descripcion">Descripcion </label>
   <input type="text" name="descripcion"><br><br>
   <label for="biografia">Bio: </label>

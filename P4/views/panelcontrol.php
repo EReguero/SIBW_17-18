@@ -13,7 +13,7 @@
         <!-- Favicon de la web-->
         <link rel="icon" href="img/favicon.ico" type="image/x-icon">
         <!-- Estilo css de la pagina -->
-        <link rel="stylesheet" type="text/css" href="css/style_panel.css"/> 
+        <link rel="stylesheet" type="text/css" href="css/style_panel.css"/>
 
     </head>
     <body>

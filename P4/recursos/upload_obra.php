@@ -14,25 +14,23 @@
             echo "El fichero es válido y se subió con éxito.\n";
         } else {
             echo "¡Posible ataque de subida de ficheros!\n";
-            echo $_FILES['imagen']['error'];
         }
 
+
+        /*
         $date = date("Y-m-d");
         
         $sql = "INSERT INTO obras (titulo, autor, fecha, coleccion, imagen, fuente_imagen, descripcion, fecha_creacion, web_autor, biografia_autor)
-        VALUES ('$_POST[titulo]','$_POST[autor]','$_POST[fecha]','$_POST[coleccion]','$fichero_subido', 'Guggenheim Bilbao','$_POST[descripcion]', '$date','$_POST[biografia]','$_POST[web]')";
+        VALUES ('$_POST[titulo]','$_POST[autor]','$_POST[fecha]','$_POST[coleccion]','$_POST[imagen]', 'Guggenheim Bilbao','$_POST[descripcion]', '$date','$_POST[biografia]','$_POST[web]')";
 
         if ($bd->query($sql) === TRUE) {
-            $sql_id = "SELECT id FROM obras WHERE titulo= '$_POST[titulo]'";
-            $result = $bd->query($sql_id);
-            $row = $result->fetch_assoc();
-          echo "<script type='text/javascript'>alert('Obra añadida correctamente');window.open(href='/?obra=".$row['id']."', '_blank'); window.location.href='panel.php?anadir_obra';</script>";
+          /*echo "<script type='text/javascript'>alert('Mensaje enviado correctamente');window.location.href='/?obra=".$_POST['obra']."';</script>";
           echo "Do";
         } else {
            echo "Error: " . $sql . "<br>" . $bd->error;
         }
     }else{
-
+ */
     }
    
 ?>

@@ -37,6 +37,8 @@ if(isset($_POST['enviar']))
             <?php }
             ?>
         </td>
+          <td class=”estilo-tabla” align="center"><a href="?editar_obra=<?php echo $registro['id']?>">Editar</td>
+        <td class="" align="center"><a href="?eliminar_obra=<?php echo $registro['id']?>">Eliminar</a>
       </tr> 
 
       <?php 

@@ -15,8 +15,12 @@ if(isset($_POST['enviar']))
     <table width="100%" border="0" align="center" cellpadding="1" cellspacing="1">
        <tr>
             <!--creamos los títulos de nuestras dos columnas de nuestra tabla -->
-            <td width="100" align="center"><strong>Nombre</strong></td>
-            <td width="100" align="center"><strong>Apellidos</strong></td>
+          <td width="100" align="center"><strong>Nombre</strong></td>
+          <td width="100" align="center"><strong>Apellidos</strong></td>
+          <td width="100" align="center"><strong>Ver</strong></td>
+          <td width="100" align="center"><strong>Editar</strong></td>
+          <td width="100" align="center"><strong>Eliminar</strong></td>
+
        </tr> 
        <?php
        $buscar =$_POST["name"];
@@ -31,7 +35,11 @@ if(isset($_POST['enviar']))
       ?> 
       <tr>     
         <td class="estilo-tabla" align="center"><?=$registro['titulo']?></td>
-        <td class=”estilo-tabla” align="center"><?=$registro['autor']?></td>
+        <td class=”estilo-tabla” align="center"><?php echo $registro['autor']?></td>
+        <td class=”estilo-tabla” align="center"><a href="/?obra=<?php echo $registro['id']?>" target ="_blank">Ver</a></td>
+        <td class=”estilo-tabla” align="center"><a href="?editar_obra=<?php echo $registro['id']?>">Editar</td>
+        <td class="" align="center"><a href="?eliminar_obra=<?php echo $registro['id']?>">Eliminar</a></td>
+
       </tr> 
 
       <?php 

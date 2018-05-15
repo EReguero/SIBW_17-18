@@ -26,7 +26,7 @@ class panel_model{
     }
 
 
-    public function añadir_obra(){
+    public function eliminar_obra(){
 
     }
 
