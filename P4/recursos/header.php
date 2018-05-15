@@ -1,7 +1,40 @@
+<!------------------------------------------------------------------------->
+<!-- Header -->
 <header id="logo">
   <img src="../img/logo.jpg" alt="logo">
   <h1>Guggenheim Bilbao</h1>
 </header>
+<!------------------------------------------------------------------------->
+<!-- Barra de usuario -->
+<div id="interbar">
+<?php
+session_start();
+if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {?>
+      <div id="interbar_dcha">
+        <p>Bienvenido, <?php echo $_SESSION['username']?></p>
+        <a href="logout.php">(Logout)</a>
+      </div>
+      <div id="interbar_izq">
+      <a href=""> Editar Perfil </a>
+      <?php if($_SESSION['privilegios']>1){?>
+          <a href="/panel.php">| Panel de Control</a>
+      <?php
+      }
+      ?>
+      </div>
+  
+  <?php } else { ?>
+      <div id="interbar_dcha">
+        <p>Bienvenido, Anónimo.</p>
+      </div>
+      <div id="interbar_izq">
+        <a href="login.php"> Iniciar sesión |</a>
+        <a href="registrer.php"> Registrate</a>
+      </div>
+
+<?php } ?>
+</div>
+<!------------------------------------------------------------------------->
 <!-- Menu Horizontal-->
 <nav id="menu">
   <ul>

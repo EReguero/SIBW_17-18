@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 15-05-2018 a las 02:10:15
+-- Tiempo de generación: 15-05-2018 a las 08:21:55
 -- Versión del servidor: 10.1.31-MariaDB
 -- Versión de PHP: 7.2.3
 
@@ -60,7 +60,9 @@ INSERT INTO `comentario` (`correo`, `id`, `obra_id`, `nome`, `ip`, `fecha`, `com
 ('eregueroc@gmail.com', 76, 7, 'Emilio Reguero Castro', '::1', '2018-04-23 02:40:36', 'Prueba2'),
 ('eregueroc@gmail.com', 77, 6, 'Emilio Reguero Castro', '::1', '2018-04-23 02:41:41', '¡Una obra maginifica!'),
 ('Erik@example.it', 78, 6, 'Erik', '::1', '2018-04-23 02:42:23', 'Merece la pena.'),
-('eregueroc@gmail.com', 79, 3, 'Emilio Reguero Castro', '::1', '2018-04-23 02:42:59', 'Prueba 4');
+('eregueroc@gmail.com', 79, 3, 'Emilio Reguero Castro', '::1', '2018-04-23 02:42:59', 'Prueba 4'),
+('preubvJHda@erc.es', 85, 3, 'comentarista', '::1', '2018-05-15 07:42:19', 'Prueba de email'),
+('preuba@erc.es', 86, 10, 'root', '::1', '2018-05-15 08:07:36', 'Hola');
 
 -- --------------------------------------------------------
 
@@ -96,7 +98,8 @@ INSERT INTO `obras` (`id`, `titulo`, `autor`, `fecha`, `coleccion`, `imagen`, `f
 (6, 'Complot de familia. Segunda versión', 'Txomin Badiola', 1993, 3, 'img/Complot.jpg', 'Guggenheim Bilbao', 'Complot de familia. Segunda versión es una obra esencial en la carrera de Txomin Badiola. En ella, los elementos estrictamente constructivos, tan estrechamente vinculados a sus obras, convergen con su interés por la arquitectura, el diseño, el mobiliario y la escenografía teatral, junto con la incorporación de referencias del cine, la televisión, las fotonovelas, los cómics, etc. Esta segunda versión a la que se alude en la primera parte del título es el desarrollo de una anterior que se presentó por primera vez en una exposición celebrada en Nueva York en 1994.\r\n\r\nLa obra fue incluida en una exposición en 1995 en Madrid. La muestra integraba una serie de ficciones (alegorías múltiples) que se alimentaban de retos extraños para la realidad que Badiola definía como situaciones absurdas o improbables plasmadas por personas reales que \"acaban creando un entorno material y espacial\". A medio camino entre la escenografía teatral y la insinuación cinematográfica, la obra de arte amplía los límites de la escultura, al tiempo que se adentra en el terreno de los medios postmodernos.\r\n\r\nAl unir objetos, construcciones y fotografías de personas aparentemente sin relación alguna entre sí pero que presentan fuertes cualidades evocadoras, el espectador se siente impelido a situarlas en el tiempo y el espacio mediante una acción imaginada y, por consiguiente, acaba completando la obra de arte. Así, es el espectador quien otorga significado a esta instalación al unificar y relacionar los diferentes espacios escenográficos, así como los objetos e imágenes ubicados en ella y en sus inmediaciones, de manera que todo se justifica mutuamente.', '2018-04-15', '2018-04-20', 'http://www.museoreinasofia.es/exposiciones/txomin-badiola', 'https://es.wikipedia.org/wiki/Txomin_Badiola'),
 (7, 'Humanos (Humans)', 'Christian Boltanski', 1994, 3, 'img/Humanos.jpg', 'Guggenheim Bilbao', 'La obra Humanos (Humans), al mismo tiempo personal y universal en cuanto a sus referencias, es una de las composiciones de grandes dimensiones que el artista acomete como monumento en honor de los muertos, insinuando una referencia al Holocausto, aunque sin nombrarlo explícitamente. Por sus dimensiones y su tono, la obra evoca el ambiente contemplativo de un pequeño teatro o un espacio de culto religioso. La instalación se compone de más de 1.100 imágenes refotografiadas de otras tantas imágenes que había utilizado anteriormente: fotos de colegio, de familia, imágenes de periódicos y del archivo de la policía. Las fotografías, al mismo tiempo iluminadas y enturbiadas por las bombillas que cuelgan desnudas, no ofrecen ningún contexto con el que se pueda identificar o conectar a los anónimos individuos, o distinguir a los vivos de los muertos, o a las víctimas de los criminales. Cada una de estas huellas de vida humana está reducida a un tamaño uniforme con el fin de dificultar la identificación de sus rasgos y sugerir la igualdad de los sujetos de las fotografías. La colección de imágenes se instala aleatoriamente, impidiéndose con ello la imposición de una narrativa única. Dentro de este entorno inquietante, Boltanski mezcla emoción e historia al yuxtaponer inocencia y culpabilidad, verdad y mentira, sentimentalismo y profundidad.', '2018-04-15', '2018-04-19', 'http://www.circulodelarte.com/es/autor/boltanski-christian/es', 'https://es.wikipedia.org/wiki/Christian_Boltanski'),
 (8, 'El diluvio (Le Déluge)', 'Miquel Barceló', 1990, 1, 'img/Diluvio.jpg', 'Guggenheim Bilbao', 'Toda la imagen de El diluvio  está pintada en tonos azules y grises, con blanco para los afluentes más lejanos, insinuando el agua. En primer plano, Barceló pintó las salpicaduras producidas por las gotas de lluvia al golpear una superficie de agua. El avance en diagonal del río y la inclinación de la lluvia aportan potencia dinámica y velocidad a la imagen; así, con medios desechados, el pintor captó la fuerza de una tormenta. El cuadro presenta el mismo efecto líquido que el de la tierra mojada bajo la lluvia. De un modo simbólico, estas imágenes de lluvia ponen fin a los numerosos paisajes desérticos del artista.\r\n\r\nLa lluvia entra por la ventana y cubre todo el cuadro, irónicamente imitando la estructura integral de algunas obras del Expresionismo Abstracto y subvirtiendo la dicotomía tradicional entre la figura y el fondo. Aquí, Barceló también quería reflejar la naturaleza líquida de la pintura y la posibilidad de usarla metafóricamente para captar el tiempo.', '2018-04-15', '2018-04-17', 'http://www.miquelbarcelo.org/', 'https://es.wikipedia.org/wiki/Miquel_Barcel%C3%B3'),
-(9, 'Tierra de los dos ríos (Zweistromland)', 'Anselm Kiefer', 1995, 1, 'img/Tierra.jpg', 'Guggenheim Bilbao', 'Tierra de los dos ríos (Zweistromland, 1995) hace referencia a la tierra delimitada por los ríos Tigris y Éufrates, cuna de la antigua Babilonia, hogar de Gilgamesh —cuya leyenda explora Kiefer en Gilgamesh y Enkidu en el bosque de cedros II (Gilgamesch und Enkidu im Zedernwald II, 1981), también perteneciente a la colección del Museo Guggenheim Bilbao—, y una región clave para el judaísmo y el cristianismo. Fue en esa región donde los sumerios inventaron la escritura en el cuarto milenio antes de Cristo. Las pinturas de Kiefer evocan la tierra, sus civilizaciones y la creación de la cultura escrita. El título, inscrito en la esquina superior derecha del lienzo, puede interpretarse como una alusión a la propia palabra escrita, que deja una huella duradera que transciende las civilizaciones y las épocas. Esta obra monumental se vio precedida por una escultura del mismo nombre, en la que varios libros de plomo transmiten la sensación de durabilidad de la palabra escrita y de la historia.', '2018-04-15', '2018-04-20', 'http://www.alejandradeargos.com/index.php/es/completas/32-artistas/287-anselm-kiefer-biografia-obras-y-exposiciones', 'https://es.wikipedia.org/wiki/Anselm_Kiefer');
+(9, 'Tierra de los dos ríos (Zweistromland)', 'Anselm Kiefer', 1995, 1, 'img/Tierra.jpg', 'Guggenheim Bilbao', 'Tierra de los dos ríos (Zweistromland, 1995) hace referencia a la tierra delimitada por los ríos Tigris y Éufrates, cuna de la antigua Babilonia, hogar de Gilgamesh —cuya leyenda explora Kiefer en Gilgamesh y Enkidu en el bosque de cedros II (Gilgamesch und Enkidu im Zedernwald II, 1981), también perteneciente a la colección del Museo Guggenheim Bilbao—, y una región clave para el judaísmo y el cristianismo. Fue en esa región donde los sumerios inventaron la escritura en el cuarto milenio antes de Cristo. Las pinturas de Kiefer evocan la tierra, sus civilizaciones y la creación de la cultura escrita. El título, inscrito en la esquina superior derecha del lienzo, puede interpretarse como una alusión a la propia palabra escrita, que deja una huella duradera que transciende las civilizaciones y las épocas. Esta obra monumental se vio precedida por una escultura del mismo nombre, en la que varios libros de plomo transmiten la sensación de durabilidad de la palabra escrita y de la historia.', '2018-04-15', '2018-04-20', 'http://www.alejandradeargos.com/index.php/es/completas/32-artistas/287-anselm-kiefer-biografia-obras-y-exposiciones', 'https://es.wikipedia.org/wiki/Anselm_Kiefer'),
+(10, 'Prueba', 'Emilio', 1995, 1, 'img/30726696_2420693224623338_5483110315572854784_n.jpg', 'Guggenheim Bilbao', 'Esta es una prueba para ver si las obras se suben correctamente es todo cvevjksañdnfgvasdfuklgbvljkjhdfvsdhjkjdkyfavsdafd', '2018-05-15', '0000-00-00', 'facebook.com', 'twitter.es');
 
 -- --------------------------------------------------------
 
@@ -139,7 +142,10 @@ CREATE TABLE `tipo_usuario` (
 --
 
 INSERT INTO `tipo_usuario` (`id`, `tipo`) VALUES
-(1, 'comentarista');
+(1, 'comentarista'),
+(3, 'gestor'),
+(2, 'moderador'),
+(4, 'superusuario');
 
 --
 -- Índices para tablas volcadas
@@ -182,13 +188,13 @@ ALTER TABLE `tipo_usuario`
 -- AUTO_INCREMENT de la tabla `comentario`
 --
 ALTER TABLE `comentario`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=80;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=87;
 
 --
 -- AUTO_INCREMENT de la tabla `obras`
 --
 ALTER TABLE `obras`
-  MODIFY `id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `palabrasprohibidas`
@@ -200,7 +206,7 @@ ALTER TABLE `palabrasprohibidas`
 -- AUTO_INCREMENT de la tabla `tipo_usuario`
 --
 ALTER TABLE `tipo_usuario`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Restricciones para tablas volcadas

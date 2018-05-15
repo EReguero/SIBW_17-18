@@ -11,19 +11,25 @@
             }
         ?>  
     </div>
-    <form id="comentar" action="insertar_comentario.php" method="post" target="_self">
-        <input type="hidden" name="obra" value=<?php echo $_GET["obra"]?>>
-        <label for="entrada_nombre">Nombre:  </label>
-        <input type="text" name="entrada_nombre" id="entrada_nombre" placeholder="Nombre completo">
-        <label for="email">Email:  </label>
-        <input type="text" name="email" id="email" placeholder="example@email.es">
-        <textarea name="entrada_texto" id="entrada_texto"  onkeyup="validarTexto(<?php foreach ($palabrasprohibidas as $palabra) {
-            if ($palabra === end($palabrasprohibidas)){
-                echo "'".$palabra."'";
-            }else{
-                echo "'".$palabra."',";  
-            }
-        } ?>)" placeholder="Introduzca aquí su comentario." ></textarea>
-        <input type="submit" id="crear_comentario" value="Enviar">
-    </form>    
+    
+    <div id="comentar">
+    <?php  
+    if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {?>  
+        <form id="comentar" action="insertar_comentario.php" method="post" target="_self">
+            <input type="hidden" name="obra" value=<?php echo $_GET["obra"]?>>
+            <textarea name="entrada_texto" id="entrada_texto"  onkeyup="validarTexto(<?php foreach ($palabrasprohibidas as $palabra) {
+                if ($palabra === end($palabrasprohibidas)){
+                    echo "'".$palabra."'";
+                }else{
+                    echo "'".$palabra."',";  
+                }
+            } ?>)" placeholder="Introduzca aquí su comentario." required></textarea>
+            <input type="submit" id="crear_comentario" value="Enviar">
+        </form>
+    <?php }else{ ?>    
+        <div id="require">
+            <p>Es necesario estar registrado para poder comentar, por favor inicie sesión o registrese.</p> 
+        </div>   
+    <?php } ?>  
+    </div>  
 </div>    

@@ -101,7 +101,42 @@
 
     }
 
+    #interbar{
+        background-color: #4caf50;
+        width: 100%;
+        margin: 0px;
+        height: 22px;
+        padding-top: 3px;
+        position: static;
+        padding-bottom: 2px;
+    }
 
+    #interbar p{
+        margin: 0px;
+        color: white;
+        font-size: 13px;
+        display: inline-block;
+    }
+
+    #interbar a{
+        margin: 0px;
+        color: white;
+        font-size: 13px;
+        display: inline-block;
+        text-decoration: none;
+    }
+
+
+    #interbar_dcha{
+        margin-left: 25px;
+        float: left;
+        display: block;
+    }
+
+    #interbar_izq{
+        float: right;
+        margin-right: 50px;
+    }
     /************************************/
     /* ----------- CUERPO -------------*/
     /************************************/
@@ -442,13 +477,13 @@
         background-color: white;
         border: solid 8px #4caf50;
         width: 69%;
-        height: 80%;
+        height: 90%;
     }
 
     /* Caja donde estan los comentarios */
     #main #box_comentarios #comentarios{
            overflow-y: auto;
-           height: 70%;
+           height: 80%;
            position: relative;
     }
 
@@ -478,9 +513,10 @@
     /* Box de comentar */
     #box_comentarios #comentar{
         border-top: solid 18px #4caf50;
+        border-bottom: solid 20px #4caf50; 
         color: white;
         background-color: #4caf50;
-        height: 28%;
+        height: 15%;
     }
 
     #comentar input[type=text]:focus {
@@ -493,16 +529,12 @@
         padding-right: 10px;
     }
 
-    #comentar label {
-        margin-left: 20px;
-    }
-
-
     #entrada_texto{
-        width: 77%;
-        height: 70px;
+        width: 76%;
+        height: 65px;
         overflow-y: auto;
         resize: none;
+        margin-top: 10px;
     }
 
     #entrada_texto:focus{
@@ -510,8 +542,8 @@
         outline:0px;
     }
     
-    #crear_comentario{
-        height: 75px;
+    #comentar #crear_comentario{
+        height: 70px;
         width:  18%;
         float: right;
         background-color: #333;
@@ -521,7 +553,10 @@
         margin-right: 25px;
     }
 
-
+    #require{
+        margin-left: 140px;
+        margin-top: 55px;
+    }
 
 
     /*********************************************/

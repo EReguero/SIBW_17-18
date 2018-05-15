@@ -26,7 +26,13 @@
         <!-- Contenedor principal del panel de control -->
         <div id="panel">
             <div id="informacion">
-                <p>Bienvenido @Usuario</p>
+                <div id="leftbox">  
+                    <p>Bienvenido <?php echo $_SESSION['username']?>.</p>
+                    <a href="logout.php"> (Logout) </a>
+                </div>
+                <div id="rightbox">
+                   <p> <a href="/">Salir del panel de control.</a></p>
+                </div>
             </div>
             <div id="menu">
                 <ul>
@@ -34,10 +40,17 @@
                     while($row = $menu->fetch_assoc()){
                         ?><li><a href='<?php echo $row['src'] ?>'><?php echo $row['nombre'] ?></a></li>
                     <?php }?>
-                <ul>
+                </ul>
+                
             </div>
             <div id="main">
-                <?php include ("recursos/".key($_GET).".php")?>
+                <?php 
+                   if(count($_GET) == 0) {
+                    
+                    }else{
+                        include ("recursos/".key($_GET).".php");
+                    }
+                ?>
             </div>
         </div>
     </body>

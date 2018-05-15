@@ -41,17 +41,16 @@
         height: 175px;
         border-left: solid 10px;
         border-right: solid 10px;
-        border-bottom: solid 10px;
+        border-bottom: solid 5px;
         border-color: #333;
     }
 
     #panel {
-        display: table;
         background-color: white;
         font-size: 14px;
         width: 98%;
         border-left: solid 10px;
-        border-right: solid 10px;
+        border-right: solid 9px;
         border-bottom: solid 10px;
         border-color: #333;
         height: 450px;
@@ -64,21 +63,42 @@
         float: left;
     }
 
-    #panel #informacion{
-        border-bottom: solid 10px;
-        border-color: #333;
+    #informacion{
+        border-bottom: solid 5px;
+        border-right: solid 5px;
+        padding-right: 2px;
+        border-color: #2333;
         background-color: #333;
-        padding-top: 1px;
+        font-size: 12px;
 
     }
 
-    #panel #informacion p{
-        color: white;
+    #informacion #leftbox{
+        font-size: 13px;
+        display: inline-block;
         margin-left: 35px;
+    }
+
+    #informacion #rightbox{
+        font-size: 13px;
+        display: inline-block;
+        float: right;
+        margin-right: 15px;
+        text-decoration: none;
+    }
+
+    #informacion p{
+        color: white;
+        display: inline-block;
+    }
+
+    #informacion a{
+        color: white;
     }
 
     #panel #menu {
         width: 20%;
+        display: table;
         float: left;
         padding-top: 20px;
         border-right: solid 10px;
@@ -102,7 +122,7 @@
         color: #333;
     }
 
-     #panel #menu a:visited{
+    #panel #menu a:visited{
         color: #333;
     }
 
@@ -113,109 +133,3 @@
         background-color:#CCCACA;
     }
  
-
-    #main #aux #biografia p{
-        color: black;
-    }
-
-    #main #aux #web p{
-        color: black;
-    }
-
-
-    /* Propiedades de la desripción de la obra */
-    #main #descripcion {
-        width: 75%;
-        float: left;
-        padding-top: 40px;
-        padding-bottom: 5px;
-    }
-
-    #main #descripcion h2{
-        border-bottom: solid 2px black;
-        width: 55%;
-    }
-
-    #main #descripcion h3{
-        margin-top: -8px;
-    }
-    #main #descripcion h4{
-        margin-top: -13px;
-        margin-bottom: 25px;
-    }
-
-    #main #fecha_creacion{
-        font-size: 10px;
-        color: black;
-        float: right;
-        padding-right: 10px;
-    }
-
-    #main #fechas{
-        width: 20%;
-        float: right;
-    }
-    #main #fecha_modificacion{
-        font-size: 10px;
-        color: black;
-        float: right;
-        padding-right: 10px;
-        margin-top: 1px;
-    }
-    #main #descripcion #foto{
-        padding-left: 15px;
-        padding-right: 15px;
-        padding-bottom: 5px;
-        float: right;
-    }
-
-    #main #descripcion #foto img{
-        height: 280px;
-        width: 280px;
-        display: block;
-    }
-
-    #main #descripcion #foto #hidden{
-        display: none;
-    }
-
-    .flecha_izquierda{
-        color: white;
-        background-color: #333;
-        border: none;
-        height: 35px;
-        width: 49%;
-
-
-    }
-
-    .flecha_derecha {
-        color: white;
-        background-color: #333;
-        border: none;
-        height: 35px;
-        width: 49%;
-        
-    }
-
-    #buttons_fl{
-        background-color: #333;
-        height: auto;
-    }
-
-    #main #descripcion #foto p{
-        font-size: 10px;
-        text-align: right;
-        margin-top: 10px;
-        margin-right: 15px;
-    } 
-
-    #main #descripcion #foto #fuente{
-        margin-top: -6px;
-        margin-bottom: 15px;
-    }
-    #main #descripcion #foto img:hover{ 
-        -webkit-transform: scale(1.9);
-        -moz-transform: scale(1.9);
-        transform: scale(1.9);
-    }
