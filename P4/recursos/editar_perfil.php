@@ -1,28 +1,11 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <!-- Titulo de la pestaña-->
-        <title>Guggenheim Bilbao</title>
-        <meta charset="utf-8">
-        <!-- Palabras clave para el buscador-->   
-        <meta name="keywords" content="Museo, Guggenheim, Bilbao, arte">
-        <!-- Descripcion de la web -->
-        <meta name="description" content="Página Web del Museo Guggenheim Bilbao">
-        <!-- Autores de la web -->
-        <meta name="author" content="Emilio, Eric">
-        <!-- Favicon de la web-->
-        <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-        <!-- Estilo css de la pagina -->
-        <link rel="stylesheet" type="text/css" href="css/style.css"/> 
-    </head>
-
-   </div>
-        <?php
-            include 'controladores/menu_controlador.php';
-    
-    
-
-            include 'recursos/footer.php';
-        ?>
-    </body>
-</html>
+<?php
+?>
+ <form action="upload_perfil.php" enctype="multipart/form-data" method="POST">
+  <label for="usuario">Usuario: </label>
+  <input type="text" name="usuario"><br><br>
+  <label for="password">Password: </label>
+  <input type="text" name="password"><br><br>
+  <label for="correo">Correo: </label>
+  <input type="text" name="correo"><br><br>
+  <input type="submit" name="enviar" value="Enviar">
+</form>
