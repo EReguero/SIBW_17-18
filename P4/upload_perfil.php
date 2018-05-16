@@ -22,7 +22,9 @@
             $sql = "UPDATE usuarios SET usuario='$usuario',password='$hash', correo='$correo'  WHERE usuario='$_SESSION[username]'";
 
             if ($bd->query($sql) === TRUE) {
-              echo "<script type='text/javascript'>alert('Perfil modificado correctamente. Hace el Logout para mirar las modificaciones.');window.location.href='/';</script>";
+              $_SESSION['username']=$usuario;
+              $_SESSION['email'] = $correo;
+              echo "<script type='text/javascript'>alert('Perfil modificado correctamente.');window.location.href='/';</script>";
             } else {
                echo "Error: " . $sql . "<br>" . $bd->error;
             }
