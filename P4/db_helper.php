@@ -5,7 +5,7 @@ class db{
         $servername = "localhost";
         $username = "admin_p3";
         $password = "practica3";
-        $dbname = "practica3";
+        $dbname = "GuggenheimBilbao";
 
 
         // Create connection
