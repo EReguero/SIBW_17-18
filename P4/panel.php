@@ -3,14 +3,13 @@
 	session_start();
 
 	if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
-		if($_SESSION['privilegios'] == "comentarista"){
+		if($_SESSION['privilegios'] == 1){
 			echo "No tienes privilegios";
 			exit;
 		}
 	} else {
-	   echo "Esta pagina es solo para usuarios registrados.<br>";
-	   echo "<br><a href='login.php'>Login</a>";
-	   echo "<br><br><a href='registrer.php'>Registrarme</a>";
+	  
+	  header("Location: /");
 	   exit;
 	}
 	
@@ -23,5 +22,5 @@
 	require("models/panel_model.php");
 	$panel = new panel_model();
 	$menu = $panel->get_menu();
-	require("views/panelcontrol.php");
+	require("views/panel/panelcontrol.php");
 ?>

@@ -10,28 +10,75 @@
 <?php
 session_start();
 if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {?>
-      <div id="interbar_dcha">
-        <p>Bienvenido, <?php echo $_SESSION['username']?></p>
-        <a href="logout.php">(Logout)</a>
-      </div>
-      <div id="interbar_izq">
-      <a href=""> Editar Perfil </a>
-      <?php if($_SESSION['privilegios']>1){?>
-          <a href="/panel.php">| Panel de Control</a>
-      <?php
-      }
-      ?>
-      </div>
+  <div id="interbar_dcha">
+    <p>Bienvenido, <?php echo $_SESSION['username']?></p>
+    <a href="logout.php">(Logout)</a>
+  </div>
+  <div id="interbar_izq">
+  <a href="?editar_perfil"> Editar Perfil </a>
+  <?php if($_SESSION['privilegios']>1){?>
+      <a href="/panel.php">| Panel de Control</a>
+  <?php
+  }
+  ?>
+  </div>
   
-  <?php } else { ?>
-      <div id="interbar_dcha">
-        <p>Bienvenido, Anónimo.</p>
+<?php } else { ?>
+  <div id="interbar_dcha">
+    <p>Bienvenido, Anónimo.</p>
+  </div>
+  <div id="interbar_izq">
+    <button id="button_interbar" onclick="showLogin();">Iniciar sesión</button>
+    <!----------------------------------------------------------------------------------------->
+    <!-- MENU OCULTO PARA LOGEAR -->
+    <div id="login" class="hide">
+      <div id="formulario"> 
+        <span onclick="closeLogin();" class="close">&times;</span>
+        <form action="login.php" method="post">
+          <div class= "column"> 
+            <input name="username" type="text" id="username" placeholder="Usuario" required>
+          </div>
+          <div class= "column">
+            <input name="password" type="password" id="password" placeholder="Contraseña" required>
+          </div>
+          <div class= "column">
+            <input type="submit" name="Submit" id="submit" value="Iniciar Sesión">
+          </div>
+        </form>
+        <div class="column login_links login_links">
+          <button id="button_interbar" onclick="closeLogin(); showRegistro();">Registrarse</button>
+        </div>
+        <div class="column login_links login_links">  
+          <button id="button_interbar">¿Contraseña olvidada?</button>  
+        </div>
       </div>
-      <div id="interbar_izq">
-        <a href="login.php"> Iniciar sesión |</a>
-        <a href="registrer.php"> Registrate</a>
+    </div>
+    <!----------------------------------------------------------------------------------------->
+    <p> | </p>
+    <button id="button_interbar" onclick="showRegistro()">Registrate</button>
+    <!----------------------------------------------------------------------------------------->
+    <!-- MENU OCULTO REGISTRO -->
+    <div id="registro" class="hide">
+      <div id="formulario"> 
+        <span onclick="closeRegistro();" class="close">&times;</span>
+        <form action="register.php" method="post">
+          <div class= "column">
+          <h3>Crea una cuenta</h3>  
+           <input type="text" id="username" name="username" placeholder="Nombre de Usuario" maxlength="32" required>
+          </div>
+          <div class= "column">  
+           <input type="password" id="password" name="password" placeholder="Contraseña" maxlength="18" required>
+          </div>
+          <div class= "column"> 
+           <input type="text" id="email" name="email" placeholder="Email"  maxlength="160" required>
+          </div>
+          <div class= "column">
+            <input type="submit" name="Submit" id="submit" value="Registrarse">
+          </div>
+        </form>
       </div>
-
+    </div>
+  </div>
 <?php } ?>
 </div>
 <!------------------------------------------------------------------------->

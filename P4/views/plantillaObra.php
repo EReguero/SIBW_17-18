@@ -2,10 +2,10 @@
 <html>
     <head>
         <!-- Titulo de la pestaña -->
-        <title>Guggenheim Bilbao - 24 Cabezas</title>
+        <title><?php echo $datos['titulo']; ?> - Guggenheim</title>
          <meta charset="utf-8">
         <!-- Palabras clave para el buscador--> 
-        <meta name="keywords" content="Museo, Guggenheim, Bilbao, 24, cabezas, antonio, saura">
+        <meta name="keywords" content="Museo, Guggenheim, Bilbao">
         <!-- Autores de la web -->
         <meta name="author" content="Emilio, Eric">
         <!-- Favicon de la web-->
@@ -45,7 +45,7 @@
             <div id="botonessociales">
                
                 <!-- Botón de pagina para imprimir -->
-                <a target="_blank" href="imprimir.php?obra=<?php echo $datos['id']?>">
+                <a target="_blank" href="?imprimir=<?php echo $datos['id']?>">
                     <img src="../img/print_button.jpg" alt="Boton imprimir">
                 </a>
 

@@ -1,33 +1,38 @@
-<!DOCTYPE html>
+<?php
+session_start();
 
-<html lang="en">
+require "db_helper.php";
 
-<head>
- <title>Login</title>
+$username = $_POST['username'];
+$password = $_POST['password'];
+ 
+$sql = "SELECT * FROM usuarios WHERE usuario = '$username'";
 
- <meta charset = "utf-8">
-</head>
+$db=db::conexion();
+$result = $db->query($sql);
 
-<body>
-
-<h1>Login de Usuarios</h1>
-<hr />
-
-<form action="check_login.php" method="post" >
-
-<label>Nombre Usuario:</label><br>
-<input name="username" type="text" id="username" required>
-<br><br>
-
-<label>Password:</label><br>
-<input name="password" type="password" id="password" required>
-<br><br>
-
-<input type="submit" name="Submit" value="LOGIN">
-
-</form>
-<hr />
+$row = $result->fetch_array(MYSQLI_ASSOC);
 
 
- </body>
-</html>
+if (password_verify($password, $row['password'])) { 
+ 
+    $_SESSION['loggedin'] = true;
+    $_SESSION['username'] = $username;
+    $_SESSION['email'] = $row['correo'];
+    $_SESSION['start'] = time();
+    $_SESSION['expire'] = $_SESSION['start'] + (60 * 60);
+
+
+    $_SESSION['privilegios'] = $row['tipo_usuario'];
+
+    echo "Bienvenido! " . $_SESSION['username'];
+    header("Location: /");
+
+ } else { 
+   echo "Username o Password estan incorrectos.";
+
+   echo "<br><a href='login.php'>Volver a Intentarlo</a>";
+ }
+
+
+ ?>

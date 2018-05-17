@@ -87,12 +87,40 @@ function plusDivs(n) {
 
 function showDivs(n) {
     var i;
-    var x = document.getElementsByClassName("mySlides");
-    if (n > x.length) {slideIndex = 1} 
-    if (n < 1) {slideIndex = x.length} ;
-    for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none"; 
+    var s = document.getElementsByClassName("mySlides");
+    if (n > s.length) {slideIndex = 1} 
+    if (n < 1) {slideIndex = s.length} ;
+    for (i = 0; i < s.length; i++) {
+        s[i].style.display = "none"; 
     }
-    x[slideIndex-1].style.display = "block"; 
+
+    var y =  s[slideIndex-1];
+    y.style.display = "block"; 
 }
 
+
+/************************************************************/
+function showLogin(){
+// Get the modal
+    var x =document.getElementById('login');
+        x.style.display="block";
+}
+
+function closeLogin(){
+    var x=document.getElementById('login');
+
+      x.style.display="none";
+}
+
+function showRegistro(){
+       var x =document.getElementById('registro');
+        x.style.display="block";
+}
+
+function closeRegistro(){
+    var x=document.getElementById('registro');
+
+      x.style.display="none";
+}
+
+    

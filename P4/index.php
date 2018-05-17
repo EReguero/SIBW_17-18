@@ -16,9 +16,12 @@
         include ("controladores/page_controlador.php");
         break;
 
-
       case 'editar_perfil':
         include ("controladores/perfil_controlador.php");
+        break;
+
+      case 'imprimir':
+        include ("controladores/imprimir_controlador.php");
         break;
     }
   }

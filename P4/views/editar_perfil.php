@@ -1,6 +1,6 @@
 <?php
 ?>
- <form action="upload_perfil.php" enctype="multipart/form-data" method="POST">
+ <form action="recursos/upload_perfil.php" enctype="multipart/form-data" method="POST">
   <label for="usuario">Usuario: </label>
   <input type="text" name="usuario"><br><br>
   <label for="password">Password: </label>

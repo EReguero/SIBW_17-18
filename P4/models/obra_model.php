@@ -19,7 +19,7 @@ class obra_model{
     }
 
     public function get_comentarios (){
-        $sql = "SELECT nome, fecha, comment_text FROM comentario WHERE obra_id= ".$this->obra_id." ORDER BY fecha ASC";
+        $sql = "SELECT * FROM comentario WHERE obra_id= ".$this->obra_id." ORDER BY fecha ASC";
         $result = $this->bd->query($sql);
 
         return $result;
@@ -40,6 +40,19 @@ class obra_model{
         $sql = "SELECT imagen FROM galeria WHERE obra = ".$this->obra_id;
         $result = $this->bd->query($sql);
         return $result;
+    }
+
+    public function existe_obra(){
+        $exist = false;
+        $sql_check = "Select * FROM obras WHERE id=".$this->obra_id;
+
+        $result = $this->bd->query($sql_check);
+        $row_cnt = $result->num_rows;
+        if($row_cnt > 0){
+            $exist=true;
+        }
+
+        return $exist;
     }
 }
 ?>

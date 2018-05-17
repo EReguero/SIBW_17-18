@@ -28,10 +28,7 @@
            VALUES ('$_POST[username]', '$hash', '$_POST[email]')";
 
  if ($db->query($query) === TRUE) {
- 
- echo "<br />" . "<h2>" . "Usuario Creado Exitosamente!" . "</h2>";
- echo "<h4>" . "Bienvenido: " . $_POST['username'] . "</h4>" . "\n\n";
- echo "<h5>" . "Hacer Login: " . "<a href='login.php'>Login</a>" . "</h5>"; 
+    echo "<script type='text/javascript'>window.location.href='/';alert('Usuario registrado correctamente. Puede iniciar sesión.');</script>";
  }
 
  else {

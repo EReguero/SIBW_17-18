@@ -7,12 +7,14 @@
 if(isset($_POST['enviar'])) 
 {   
 ?>
+   
+  <div id="resultado_comentario" class="tabla_resultado"> 
    <!-- el resultado de la búsqueda lo encapsularemos en un tabla -->
-    <table width="100%" border="0" align="center" cellpadding="1" cellspacing="1">
+    <table>
        <tr>
             <!--creamos los títulos de nuestras dos columnas de nuestra tabla -->
-            <td width="100" align="center"><strong>Usuario</strong></td>
-            <td width="100" align="center"><strong>Texto</strong></td>
+            <td><strong>Nombre</strong></td>
+            <td><strong>Obras</strong></td>
        </tr> 
        <?php
        $buscar =$_POST["name"];
@@ -37,8 +39,14 @@ if(isset($_POST['enviar']))
             <?php }
             ?>
         </td>
-          <td class=”estilo-tabla” align="center"><a href="?editar_obra=<?php echo $registro['id']?>">Editar</td>
-        <td class="" align="center"><a href="?eliminar_obra=<?php echo $registro['id']?>">Eliminar</a>
+        <td class=”estilo-tabla” align="center"><a href="?editar_coleccion=<?php echo $registro['id'] ?>">Editar</a></td>
+        <td class="" align="center">
+          <form action = "recursos/panel/eliminar_coleccion.php" method = "post" 
+            onsubmit="return confirm('¿Esta seguro de querer eliminar esta coleccion?');">
+            <input type="hidden" name="id" value="<?php echo $registro['id'] ?>">
+            <input type="submit" name="delete" value="Eliminar"/>
+          </form>
+        </td>
       </tr> 
 
       <?php 
@@ -46,6 +54,7 @@ if(isset($_POST['enviar']))
      ?>
 
 </table>
+</div>
    <?php
 } else{
 }// fin if

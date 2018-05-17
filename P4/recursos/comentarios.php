@@ -2,20 +2,23 @@
 <div id ="box_comentarios">
     <div id="comentarios">
         <?php
-            while($row = $comentarios->fetch_assoc()){
-                echo"<div class='comentario'>";
-                echo"<p class='nombre'>".$row['nome']."</p>";
-                echo"<p class='fecha'>".$row['fecha']."</p>";
-                echo "<p class='text'>".$row['comment_text']."</p>";
-                echo "</div>";
-            }
+            while($row = $comentarios->fetch_assoc()){?>
+            <div class='comentario'>
+                <p class='nombre'><?php echo $row['nome']?></p>
+                <p class='fecha'>Publicado el: <?php echo $row['fecha']?></p>
+                <p class='text'><?php echo $row['comment_text']?></p>
+                <?php if($row['fecha_edicion'] != '0000-00-00 00:00:00'){?>
+                    <p class='fecha_mod'>Mensaje editado el <?php echo $row['fecha_edicion']?></p>
+                <?php } ?>
+            </div>
+            <?php }
         ?>  
     </div>
     
     <div id="comentar">
     <?php  
     if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {?>  
-        <form id="comentar" action="insertar_comentario.php" method="post" target="_self">
+        <form id="comentar" action="comentar.php" method="post" target="_self">
             <input type="hidden" name="obra" value=<?php echo $_GET["obra"]?>>
             <textarea name="entrada_texto" id="entrada_texto"  onkeyup="validarTexto(<?php foreach ($palabrasprohibidas as $palabra) {
                 if ($palabra === end($palabrasprohibidas)){
@@ -33,3 +36,4 @@
     <?php } ?>  
     </div>  
 </div>    
+

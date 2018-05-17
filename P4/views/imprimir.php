@@ -12,25 +12,25 @@
     </head>
     <!-- Cuerpo con la información a imprimir -->
     <body>
-        <?php
-            require("../models/obra_model.php");
-            $obra = new obra_model();
-            $datos = $obra->get_datos();
-            $comentarios = $obra->get_comentarios();
-            $palabrasprohibidas = $obra->get_palabrasprohibidas();
-        ?>
         <div id="logo">
                 <img src="../img/logo.jpg" alt="logo">
         </div>
-         <div id="texto_imprimir">     
+        <div id="texto_imprimir">     
             <h2><?php echo $datos['titulo']?></h2>
             <h3><?php echo $datos['autor']?></h3>
-            <H4>Fecha</H4>
-            <div id="foto">
-                <img src="../<?php echo $datos['imagen']?>" alt="<?php echo $datos['titulo']?>">
-                <p><?php echo $datos['titulo']?></p>
-            </div>
-            <p><?php echo $datos['descripcion']</p>
+            <H4><?php echo $datos['fecha']?></H4>
+           
+            <p id="left_col">
+            <?php echo $p1 ?>   
+            </p>
+
+            <p id="right_col">
+            <?php echo $p2 ?>
+            </p>    
+
+
+            <img src="../<?php echo $datos['imagen']?>" alt="<?php echo $datos['titulo']?>">
+    
         </div>
         <!-- Información de Copyright -->
         <div id="copyright">

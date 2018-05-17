@@ -14,6 +14,7 @@
         <link rel="icon" href="img/favicon.ico" type="image/x-icon">
         <!-- Estilo css de la pagina -->
         <link rel="stylesheet" type="text/css" href="css/style_panel.css"/>
+        <script src="js/funciones_panel.js"></script>
 
     </head>
     <body>
@@ -48,7 +49,7 @@
                    if(count($_GET) == 0) {
                     
                     }else{
-                        include ("recursos/".key($_GET).".php");
+                        include ("views/panel/".key($_GET).".php");
                     }
                 ?>
             </div>

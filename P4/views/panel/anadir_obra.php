@@ -1,6 +1,6 @@
 <?php
 ?>
- <form action="upload_obra.php" enctype="multipart/form-data" method="POST">                
+ <form action="recursos/panel/upload_obra.php" enctype="multipart/form-data" method="POST">                
   <label for="titulo">Titulo: </label>
   <input type="text" name="titulo"><br><br>
   <label for="autor">Autor: </label>
