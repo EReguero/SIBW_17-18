@@ -22,8 +22,6 @@
 			}
 		}
 
-		return $exist;
-
 	    $sql = "DELETE FROM obras WHERE id=".$id;
 	    
 	    $sql_imagen = "SELECT imagen from obras WHERE id=".$id;
