@@ -7,6 +7,7 @@
         background-repeat: round;
         border-color: #333;
         font-family: verdana;   
+        padding-bottom: 15px;
     }
 
     /************************************/
@@ -59,13 +60,17 @@
         height: auto;
         overflow: hidden;
     }
-
+    #panel h2{
+        color:#4caf50;
+        text-align: center;
+    }
     #panel #main{
-        width: 82%;
-        padding-left: 10px;
+        width: 83%;
         float: left;
         border-left: solid 10px #333;
         min-height: 350px;
+       
+
     }
 
     #informacion{
@@ -105,10 +110,14 @@
         width: 17%;
         display: table;
         float: left;
-        padding-top: 20px;
         border-color: #333; 
         height: 100%;
         margin-left: -10px;
+    }
+
+    #panel #menu li.active a{
+        background-color: #4caf50;
+        color: white;
     }
 
     #panel #menu li{
@@ -130,63 +139,278 @@
         color: #333;
     }
 /******************************************************************************/
-    .formulario{
-        padding: 15px;
+    .sep_form{
+        border-bottom: solid 5px #333;
+        width: 100%;
+    }
+
+    .busqueda { 
+        margin-top: 25px;
         margin-left: 20px;
+        margin-bottom: 25px;
     }
+ 
 
-    .formulario input, .formulario select{
-        margin-right: 15px;
-    }
-
-    .formulario .send{
-        border:none;
-        background-color: #4caf50;
+    .busqueda input[type=submit]{
+        background-color: #333;
         color: white;
-        padding: 5px;
+        border: none;
+        width: 80px;
+        height: 25px;
+        margin-left: 45px;
+    }
+    .busqueda #all {
+        margin-left: 25px;
+        width: 100px;
+        height: 26px;
+    }
+  
+  
+    .busqueda .text_busqueda{
+        background: white url("/img/busqueda.png") left no-repeat;
+        padding-left: 24px;
+        background-position: 2% 50%;
+        height: 20px;
+        width: 200px;
+        border: solid 1px #333;
+    }
+
+    .busqueda label{
+        margin-right: 3px;
+    }
+
+    .busqueda label[for=texto]{
+        margin-left: 35px;
+    }
+    .busqueda .select{
+        width: 150px;
+        height: 24px;
+        margin-top: 2px;
+    }
+
+    #upload_boton{
+        background: transparent;
+        border: none;
+        margin-left: 245px;
+
+        color: #4caf50;
+        font-weight: bold;
+    }
+
+    #upload_foto{
+        margin: 15px;
+        width: 75%; 
+        margin:auto;
+        margin-top: 25px;
+    }
+
+    #upload_foto #miniatura{
+        display: none;
+        width: 300px;
+        height: 300px;
+        padding-top: 15px;
+        margin: auto;
+    }
+
+    #up_image{
+        margin: 10px;
+    }
+    .send_image{
+        background: #333;
+        border: dotted 1px #333;
+        margin-left: 125px;
+        margin-top: 25px;
+        margin-bottom: 15px;
+        border: none;
+        color: white;
+        font-weight: bold;
+        width: 140px;
+        height: 25px; 
+    }
+
+    #imagenes .eliminar{
+        font-weight: bold;
+        margin-left: 95px;
     }
 
 /******************************************************************************/
     tr:nth-child(odd) {
-        background-color:#DBDFED;
+        background-color:#EEEBEB;  //* Clarito gris*/
     }
     tr:nth-child(even) {
-        background-color:#CCCACA;
+        background-color:#FAF7F7;
     }
- 
+    
+    table{
+        width:100%; 
+        border: none; 
+        text-align: center;
+        border-spacing: 0px;
+        border-collapse: separate;
+        margin: auto;
+    }
+
+    table tr{
+        padding-top: 10px;
+        margin-bottom: 2px;
+    }
+
+    table td{
+        padding: 5px;
+    }
+    
+    .title{
+        font-weight: bold;
+        border-bottom: solid 2px #333; 
+        border-spacing: 0px
+    }
+
     .tabla_resultado{
-        overflow: scroll;
-        max-height: 400px;
-        min-width: 100%;
-    }
-    .tabla_resultado table{
-     
-        border: 0;
-        text-align: center;
-        padding: 1px ;
-        border-spacing: 1px;
+        overflow: auto;
+        height: auto;
+        max-height: 450px;
     }
 
-    .tabla_resultado td{
-        text-align: center;
+    .tabla_resultado a{
+        color: #4caf50;
+        text-decoration: none;
     }
+
+    .tabla_resultado a:visited{
+        color: #4caf50;
+    }
+
+    .tabla_resultado .delete{
+        background: transparent;
+        color: red;
+        border:none;
+        cursor: pointer;
+        font-size: 14px;
+    }
+
+    .underline{
+        text-decoration: none;
+        border-bottom: 1px solid #333;
+    }
+
 /******************************************************************************/
-/* Busqueda  usuario*/
-#thumb img {
-    border: 1px solid #ddd; /* Gray border */
-    border-radius: 4px;  /* Rounded border */
-    padding: 5px; /* Some padding */
-    width: 150px; /* Set a small width */
+/* Añadir Obra*/
+#anadir_obra{
+    margin:25px;
+    margin-left: 30px;
+    width: 60;
+    float:left;
 }
 
-/* Add a hover effect (blue shadow) */
-#thumb img:hover {
-    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+#anadir_obra input, #anadir_obra textarea{
+    -webkit-box-sizing: border-box; /* For legacy WebKit based browsers */
+    -moz-box-sizing: border-box; /* For legacy (Firefox <29) Gecko based browsers */
+    box-sizing: border-box;
+
+}
+#anadir_obra .column{
+     margin-top: 15px;
+}
+#anadir_obra label {
+    color: #4caf50;
+    font-weight: bold;
+    width: 160px;
+    float: left;
+}
+
+#anadir_obra textarea{
+    width: 350px;
+    height: auto;
+    max-width: 350px;
+    min-width: 200px;
+    max-height: 450px;
+    min-height: 200px;
+}
+
+#anadir_obra input[type=submit]{
+    background-color: #333;
+    color: white;
+    border: none;
+    margin-left: 350px;
+    margin-top: 25px;
+    width: 150px;
+    height: 60px;
+}
+
+#thumb_anadir{
+    width: 34%;
+    height: 260px;
+    float: left;
+    margin-top: 65px;
+}
+
+#thumb_anadir img{
+    height: 100%;
+    width: 100%;
+}
+
+#editar_coleccion{
+    margin-left: 65px;
+
+}
+
+#editar_coleccion label{
+    color: #4caf50;
+    font-weight: bold;
+    width: auto;
+    float: left;
+}
+
+#editar_coleccion .column{
+    padding-top: 25px;
+    margin-top: 5px;
+}
+
+#editar_coleccion h4{
+    border-bottom: 2px solid #333;
+    color: #4caf50;
+    width: 80%;
+}
+
+
+#editar_coleccion .coleccion_change{
+    background: transparent;
+    color: #333;
+    border: none;
+    margin-left: 5px;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+#editar_coleccion input[type=submit]{
+    background-color: #333;
+    color: white;
+    border: none;
+    margin-left: 350px;
+    margin-top: 25px;
+    width: 150px;
+    height: 40px;
+    margin-bottom: 20px;
+}
+
+#editar_coleccion input, #editar_coleccion textarea {
+    margin-left: 15px;
+}
+
+#editar_coleccion textarea {
+    margin-left: 15px;
+    width: 392px;
+    height: 81px;
+    min-height:50px;
+    min-width:244px;
+    max-height: 190px;
+    max-width: 450px;
+
 }
 /******************************************************************************/
 /******************************************************************************/
 
- /* Propiedades del contenedor principal de las obras */
+ /* Propiedades del contenedor principal de las IMAGENES */
 #main #imagenes{
     float: left;
     padding-top: 40px;
@@ -197,10 +421,11 @@
 
 /*Propiedades del contenedor que contiene la obra*/
 #main #imagenes .contenedor_obra{
-    width: 32%;
+    width: 30%;
     height: 280px;
     float: left;
     padding-bottom: 5px;
+    padding-left: 25px; 
     margin: 0 auto;
 }
 
@@ -212,6 +437,7 @@
     border: solid 3px #C5C5B5;
 }
 
+
 #main #imagenes .contenedor_obra .eliminar{
     font-size: 15px;
     margin-top: 5px;
@@ -219,4 +445,61 @@
     border: none;
     color: red;
     cursor:pointer;
+}
+
+/******************************************************************************/
+/******************************************************************************/
+#edit_form_container{
+
+    margin-left: 25%;
+    margin-top: 45px;
+    margin-bottom: 25px;
+    height: 355px;
+    width: 70%;
+}
+#edit_form_container label {
+    color: #4caf50;
+    font-weight: bold;
+    width: 200px;
+    float: left;
+}
+#edit_perfil_form .submit{
+    border:none;
+    background: #4caf50;
+    border: solid #4caf50;
+    color:white;
+    padding: 12px;
+    margin-top: 15px;
+    margin-left: 105px;
+    margin-bottom: 25px;
+    width: 35%;
+}
+#edit_perfil_form .column{
+    margin-bottom: 20px;
+}
+#edit_perfil_form .password, #edit_perfil_form textarea,
+#edit_perfil_form .username, #edit_perfil_form .email{
+    width : 250px;
+    margin: 0;
+
+    -webkit-box-sizing: border-box; /* For legacy WebKit based browsers */
+    -moz-box-sizing: border-box; /* For legacy (Firefox <29) Gecko based browsers */
+    box-sizing: border-box;
+}
+
+
+#edit_perfil_form textarea{
+    max-width: 350px;
+    min-width: 250px;
+    height: 50px;
+    max-height: 100px;
+    min-height: 50px;
+}
+
+
+
+.no_search{
+    text-align: center;
+    font-weight: bold;
+    margin: 15% auto;
 }

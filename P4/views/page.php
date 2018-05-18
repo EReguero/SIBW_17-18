@@ -14,15 +14,19 @@
         <link rel="icon" href="img/favicon.ico" type="image/x-icon">
         <!-- Estilo css de la pagina -->
         <link rel="stylesheet" type="text/css" href="css/style.css"/> 
+           <script src="js/funciones.js"></script>
     </head>
 
-   </div>
+   </body>
+        
         <?php
             include 'controladores/menu_controlador.php';
-    
-            include ($page_select.'.php');
-
-            include 'recursos/footer.php';
         ?>
+        <div id=main>
+           <?php include ($page_select.'.php'); ?>
+        </div>
+           <?php include 'recursos/footer.php';
+        ?>
+        </div>
     </body>
 </html>

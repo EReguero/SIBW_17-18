@@ -31,7 +31,8 @@
         </form>
     <?php }else{ ?>    
         <div id="require">
-            <p>Es necesario estar registrado para poder comentar, por favor inicie sesión o registrese.</p> 
+            <p>Es necesario estar registrado para poder comentar, por favor <button class="underline"  onclick="mostrarComentarios(); showLogin();" id="button_interbar">inicie sesión</button> o <button  class="underline" onclick="mostrarComentarios(); showRegistro();"id="button_interbar">registrese.</button>
+            </p> 
         </div>   
     <?php } ?>  
     </div>  

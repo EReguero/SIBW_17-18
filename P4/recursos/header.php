@@ -15,7 +15,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {?>
     <a href="logout.php">(Logout)</a>
   </div>
   <div id="interbar_izq">
-  <a href="?editar_perfil"> Editar Perfil </a>
+  <a href="?page=editar_perfil"> Editar Perfil </a>
   <?php if($_SESSION['privilegios']>1){?>
       <a href="/panel.php">| Panel de Control</a>
   <?php
@@ -36,13 +36,13 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {?>
         <span onclick="closeLogin();" class="close">&times;</span>
         <form action="login.php" method="post">
           <div class= "column"> 
-            <input name="username" type="text" id="username" placeholder="Usuario" required>
+            <input name="username" type="text" id="username" class="username" placeholder="Usuario" required>
           </div>
           <div class= "column">
-            <input name="password" type="password" id="password" placeholder="Contraseña" required>
+            <input name="password" type="password" class="password" id="password_login" placeholder="Contraseña" required>
           </div>
           <div class= "column">
-            <input type="submit" name="Submit" id="submit" value="Iniciar Sesión">
+            <input type="submit" name="Submit" class="submit" id="loguear" value="Iniciar Sesión">
           </div>
         </form>
         <div class="column login_links login_links">
@@ -60,20 +60,26 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {?>
     <!-- MENU OCULTO REGISTRO -->
     <div id="registro" class="hide">
       <div id="formulario"> 
-        <span onclick="closeRegistro();" class="close">&times;</span>
-        <form action="register.php" method="post">
+        <span onclick="closeRegistro();" onload="errorRegistro();" class="close">&times;</span>
+        <form id="formulario_registro" action="register.php" method="post">
           <div class= "column">
           <h3>Crea una cuenta</h3>  
-           <input type="text" id="username" name="username" placeholder="Nombre de Usuario" maxlength="32" required>
+           <input type="text" id="register_username" name="username" class="username" placeholder="Nombre de Usuario" maxlength="32" required>
           </div>
           <div class= "column">  
-           <input type="password" id="password" name="password" placeholder="Contraseña" maxlength="18" required>
+           <input type="password" id="password"  class="password" name="password" placeholder="Contraseña" maxlength="18" required>
+          </div>
+          <div class= "column">  
+           <input type="password" id="password2"  class ="password" name="password2" placeholder="Vuelva a introducir la contraseña" maxlength="18" required>
           </div>
           <div class= "column"> 
            <input type="text" id="email" name="email" placeholder="Email"  maxlength="160" required>
           </div>
+          <div class="column">
+            <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+          </div>
           <div class= "column">
-            <input type="submit" name="Submit" id="submit" value="Registrarse">
+            <input type="submit" name="Submit" class="submit" id="registrar" value="Registrarse">
           </div>
         </form>
       </div>

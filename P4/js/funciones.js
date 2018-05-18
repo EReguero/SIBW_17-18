@@ -113,9 +113,10 @@ function closeLogin(){
 }
 
 function showRegistro(){
-       var x =document.getElementById('registro');
+        var x =document.getElementById('registro');
         x.style.display="block";
 }
+
 
 function closeRegistro(){
     var x=document.getElementById('registro');

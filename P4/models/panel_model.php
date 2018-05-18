@@ -49,12 +49,24 @@ class panel_model{
         return $result;
     }
 
-    public function get_resto_colecciones($coleccion_id){
+    public function get_resto_colecciones(){
         $sql = "SELECT *  FROM colecciones";
         $result = $this->bd->query($sql);
       
         while($row = $result->fetch_assoc()){
-          $rows[] = "'".$row['nombre']."'";
+          $rows[] = "'".$row['nombre']."','".$row['id']."'";
+        }
+        
+        $string = implode(",",$rows);
+        return $string;
+    }
+
+    public function get_resto_obras(){
+        $sql = "SELECT id,titulo  FROM obras";
+        $result = $this->bd->query($sql);
+      
+        while($row = $result->fetch_assoc()){
+          $rows[] = "'".$row['titulo']."','".$row['id']."'";
         }
         
         $string = implode(",",$rows);
@@ -75,6 +87,21 @@ class panel_model{
         $datos = $result->fetch_assoc();
 
         return $datos;
+    }
+
+    public function get_usuario($usuario_id){
+        $sql = "SELECT id, usuario, correo, tipo_usuario, fecha_nacimiento, biografia  FROM usuarios WHERE id=".$usuario_id;
+        $result = $this->bd->query($sql);
+        $datos = $result->fetch_assoc();
+
+        return $datos;
+    }
+
+       public function get_roles(){
+        $sql = "SELECT *  FROM tipo_usuario";
+        $result = $this->bd->query($sql);
+
+        return $result;
     }
 }
 ?>

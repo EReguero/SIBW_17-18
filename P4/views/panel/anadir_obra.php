@@ -1,32 +1,50 @@
-<?php
-?>
- <form action="recursos/panel/upload_obra.php" enctype="multipart/form-data" method="POST">                
-  <label for="titulo">Titulo: </label>
-  <input type="text" name="titulo"><br><br>
-  <label for="autor">Autor: </label>
-  <input type="text" name="autor"><br><br>
-  <label for="fecha">Fecha: </label>
-  <input type="number" name="fecha"><br><br>
-  <label for="coleccion">Colección: </label>
-  <select name="coleccion">
-  	<?php
-  		$colecciones = $panel ->get_colecciones();
-  		while($registro = $colecciones->fetch_assoc()){?>
-  		 <option value='<?php echo $registro['id'] ?>'><?php echo $registro['nombre']?></option>
-  	<?php	
-  		}
-  	?>
-  </select><br><br>
-  <label for="imagen">Imagen: </label>
-  <input type="file" name="imagen"><br><br>
-  <label for="descripcion">Descripcion </label>
-  <input type="text" name="descripcion"><br><br>
-  <label for="biografia">Bio: </label>
-  <input type="text" name="biografia"><br><br>
-  <label for="web">Web: </label>
-  <input type="text" name="web"><br><br>
-  <input type="submit" name="enviar" value="Enviar">
+<h2> Añadir Obra</h2>
+<form id="anadir_obra" action="recursos/panel/upload_obra.php" enctype="multipart/form-data" method="POST">                
+  <div class="column">  
+    <label for="titulo">Titulo: </label>
+    <input type="text" name="titulo" placeholder="Introduzca titulo">
+  </div>  
+  <div class="column">
+    <label for="autor">Autor: </label>
+    <input type="text" name="autor"placeholder="Introduzca autor">
+  </div>  
+  <div class="column">
+    <label for="fecha">Fecha: </label>
+    <input type="number" name="fecha" placeholder="YYYY" min="0" max="2018">
+  </div>  
+  <div class="column">
+    <label for="coleccion">Colección: </label>
+    <select name="coleccion">
+    	<?php
+    		$colecciones = $panel ->get_colecciones();
+    		while($registro = $colecciones->fetch_assoc()){?>
+    		 <option value='<?php echo $registro['id'] ?>'><?php echo $registro['nombre']?></option>
+    	<?php	
+    		}
+    	?>
+    </select>
+  </div>  
+  <div class="column">
+    <label for="imagen">Imagen: </label>
+    <input type="file" name="imagen" onchange="preview_imagen(this);">
+  </div>  
+  <div class="column">
+    <label for="descripcion">Descripcion: </label>
+    <textarea name="descripcion"></textarea>
+  </div>  
+  <div class="column">
+    <label for="biografia">Enlace Biografia: </label>
+    <input type="text" name="biografia" placeholder="https://wwww.enlace.com">
+   </div>  
+  <div class="column">
+    <label for="web">Enlace Web: </label>
+    <input type="text" name="web" placeholder="http://wwww.enlace.com">
+  </div>
+  <input type="submit" name="enviar" value="Añadir Obra">
 </form>
+<div id="thumb_anadir">
+    <img id="miniatura" src="img/image.png"  alt="Preview">
+</div>
 
 
 

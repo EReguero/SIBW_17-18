@@ -4,7 +4,7 @@
 
 	if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
 		if($_SESSION['privilegios'] == 1){
-			echo "No tienes privilegios";
+			 echo "<script type='text/javascript'>alert('No tienes privilegios para aceder a esta zona.'); window.location.href='/';</script>"; 
 			exit;
 		}
 	} else {

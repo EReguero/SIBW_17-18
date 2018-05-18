@@ -1,4 +1,3 @@
-<div id="main">
 <table id="entradas">
   <tr id="title">
     <th>Tipo Entrada</th>
@@ -18,4 +17,3 @@
      <?php  } ?>
 </table> 
     <button id="comprar_entradas">Comprar entradas</button>
-</div> 

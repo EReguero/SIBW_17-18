@@ -30,8 +30,8 @@
             <!-- Contendor con las obras de index-->
             <div id="obras">
                 <h3 id="colecciones"><?php echo $datos[1] ?> </h3>
-                <?php
-                while($row = $obras_coleccion->fetch_assoc()){
+                <p class="descripcion_coleccion"><?php echo $datos[2] ?></p>
+                <?php while($row = $obras_coleccion->fetch_assoc()){
                     echo "<div class='contenedor_obra'>";    
                     echo "<a href='?obra=".$row['id']."''><img src=".$row['imagen']." alt=".$row['titulo']."></a>";
                     echo "<p>".$row['titulo']."</p>";

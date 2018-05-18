@@ -1,34 +1,30 @@
 <?php
-class panel_model{
+class perfil_model{
     private $db;
 
  
     public function __construct(){
-        $this->bd=db::conexion();
+        $this->db=db::conexion();
     }
 
 
     
-    public function get_menu(){
-        $sql = "SELECT * FROM panel_menu WHERE privilegios <= '$_SESSION[privilegios]' ORDER BY orden ASC";
-        $result = $this->bd->query($sql);
-
-        return $result;
-    }
-
-
-    public function get_colecciones(){
+    public function get_datos(){
+        $sql = "SELECT usuario, correo, fecha_nacimiento, biografia FROM usuarios WHERE usuario = '".$_SESSION['username']."'";
         
-        $sql = "SELECT *  FROM colecciones";
-        $result = $this->bd->query($sql);
+        if($this->db->query($sql)){
+            $result = $this->db->query($sql);
+         
+            $datos = $result->fetch_assoc();
 
-        return $result;
+             return $datos;
+        }else{
+            echo "Error: " . $sql . "<br>" . $this->db->error;
+        }
     }
 
 
-    public function eliminar_obra(){
-
-    }
+    
 
 }
 ?>

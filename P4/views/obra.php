@@ -24,5 +24,7 @@
 </article>
 <div id="fechas">
 <p id="fecha_creacion">Obra añadida el: <?php echo $datos['fecha_creacion']?></p>
-<p id="fecha_modificacion">Obra modificada el: <?php echo $datos['fecha_modificacion']?></p>
+<?php if($datos['fecha_modificacion'] != '0000-00-00'){?>    
+    <p id="fecha_modificacion">Obra modificada el: <?php echo $datos['fecha_modificacion']?></p>
+<?php }?>
 </div> 

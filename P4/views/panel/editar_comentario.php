@@ -1,30 +1,27 @@
 <?php
   $datos = $panel ->get_comentario($_GET["editar_comentario"]);
-  $obras = $panel ->get_obras();
+  $obra= $panel ->get_obra($datos['obra_id']);
+  $resto_obras = $panel ->get_resto_obras();
+
 ?>
- <form action="/recursos/panel/update_comentario.php" enctype="multipart/form-data" method="POST">                
-  <p>Usuario: <?php echo $datos['nome'] ?></p><br><br>
- 
-  <label for="coleccion">Colección: </label>
-  <select name="obra_id">
-  	<?php
-      while($row = $obras->fetch_assoc()){
-        if($row['id'] === $datos['obra_id']){?>
-          <option value='<?php echo $row['id'] ?>' selected><?php echo $row['titulo']?></option> 
-  <?php }else{ ?>
-  		    <option value='<?php echo $row['id'] ?>'><?php echo $row['titulo']?></option> 
-  <?php }
-      }?>
-  </select><br><br>
-  
-  
-  <label for="texto" >Texto </label>
-  <textarea type="text" name="texto"><?php echo $datos['comment_text'] ?></textarea>
-
+<form id="editar_coleccion" action="/recursos/panel/update_comentario.php" method="POST">                
+  <div class="column">  
+    <label for="Usuario">Usuario:</label>
+    <input type="text" name="user" value="<?php echo $datos['nome'] ?>" readonly>
+  </div>
+  <div class="column coleccion_form" id="obra_<?php echo $datos['obra_id']?>">  
+    <label for="coleccion" id="label_<?php echo $datos['obra_id']?>">Comentario en <span class="underline"><?php echo $obra['titulo']?></span></label>
+    <button class="coleccion_change" id="cambiar_boton_<?php echo $datos['obra_id']?>" onclick="changeColeccion(<?php echo "'".$obra['titulo']."'"?>,<?php echo $datos['obra_id']?>,<?php echo $resto_obras ?>);">+ Mover comentario a otra obra</button>
+  </div>
+  <div class="column">  
+    <label for="texto" >Texto: </label>
+    <textarea type="text" name="texto"><?php echo $datos['comment_text'] ?></textarea>
+  </div>
+  <input type="hidden" name="obra_old" value="<?php echo $datos['obra_id']?>">
   <input type="hidden" name="comentario_id" value="<?php echo $datos['id'] ?>">
-
   <input type="submit" name="enviar" value="Enviar">
 </form>
+
 
 
 

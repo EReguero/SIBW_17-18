@@ -1,10 +1,11 @@
 <?php
   $obras = $panel->get_obras();
 ?>
-
-<form action="" method="POST">                
-  <select name="table" onchange="">
-      <?php
+<div class="sep_form">
+  <form action="" class="busqueda" method="POST">                
+    <LABEL for="option">Imagenes de: </LABEL>
+    <select name="table" class="select">
+         <?php
       while($row = $obras->fetch_assoc()){ 
         $id = $row['id']
       ?>
@@ -12,9 +13,12 @@
       <?php 
       } //fin blucle*/
      ?>
-  </select>
-  <input type="submit" name="enviar" value="Enviar">
-</form>
+      </select> 
+      <input type="submit" class="search" name="enviar" value="Buscar">
+  </form>
+</div>
+
+     
 <?php
 if(isset($_POST['enviar'])) 
 {    

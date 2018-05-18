@@ -1,20 +1,27 @@
-<form action="" method="POST">                
-  <label for="name">Nombre de la Colección: </label>
-  <input type="text" name="name">
-  <input type="submit" name="enviar" value="Enviar">
-</form>
+<div class="sep_form">
+  <form action="" class="busqueda" method="POST">   
+  <form action="" method="POST">                
+    <label for="name">Nombre de la Colección: </label>
+    <input type="text" class="text_busqueda" name="name"  placeholder="Introduzca su busqueda" value="<?php echo isset($_POST['name']) ? $_POST['name'] : '' ?>">
+    <input type="submit" class="search" name="enviar" value="Buscar">
+    <input type="submit" class="search" id="all" name="all" value="Mostrar todos">
+  </form>
+</div>
+
 <?php
-if(isset($_POST['enviar'])) 
+if(isset($_POST['enviar']) && !empty($_POST["name"]) || isset($_POST['all'])) 
 {   
 ?>
    
-  <div id="resultado_comentario" class="tabla_resultado"> 
+  <div class="tabla_resultado"> 
    <!-- el resultado de la búsqueda lo encapsularemos en un tabla -->
     <table>
        <tr>
             <!--creamos los títulos de nuestras dos columnas de nuestra tabla -->
-            <td><strong>Nombre</strong></td>
-            <td><strong>Obras</strong></td>
+            <td class="title">Nombre</td>
+            <td class="title">Obras</td>
+            <td class="title">Editar</td>
+            <td class="title">Eliminar</td>
        </tr> 
        <?php
        $buscar =$_POST["name"];
@@ -29,8 +36,8 @@ if(isset($_POST['enviar']))
       while($registro = $result_collect->fetch_assoc()){
       ?> 
       <tr>     
-        <td class="estilo-tabla" align="center"><?=$registro['nombre']?></td>
-        <td class=”estilo-tabla” align="center">
+        <td><?=$registro['nombre']?></td>
+        <td>
           <?php 
              $sql_obras= "SELECT titulo FROM obras WHERE coleccion =".$registro['id'] ;
              $result_obras = $bd->query($sql_obras);
@@ -39,12 +46,12 @@ if(isset($_POST['enviar']))
             <?php }
             ?>
         </td>
-        <td class=”estilo-tabla” align="center"><a href="?editar_coleccion=<?php echo $registro['id'] ?>">Editar</a></td>
-        <td class="" align="center">
+        <td><a href="?editar_coleccion=<?php echo $registro['id'] ?>">Editar</a></td>
+        <td>
           <form action = "recursos/panel/eliminar_coleccion.php" method = "post" 
             onsubmit="return confirm('¿Esta seguro de querer eliminar esta coleccion?');">
             <input type="hidden" name="id" value="<?php echo $registro['id'] ?>">
-            <input type="submit" name="delete" value="Eliminar"/>
+            <input type="submit" name="delete" class="delete" value="Eliminar"/>
           </form>
         </td>
       </tr> 
@@ -57,5 +64,10 @@ if(isset($_POST['enviar']))
 </div>
    <?php
 } else{
+  if(empty($_POST["name"]) && isset($_POST['enviar'])){
+    ?>
+    <p class="no_search">Introduzca una busqueda por favor.</p>
+    <?php
+  }
 }// fin if
 ?>
