@@ -7,12 +7,27 @@
     if(is_numeric($id) && $id > 0 && existeObra($id, $db)){
 	    
 	    $sql_comments = "DELETE FROM comentario WHERE obra_id=".$id;
-	   
+	  
+	   	$dir="../../";
+
+		$sql = "SELECT * FROM galeria WHERE obra=".$id;
+		$result = $db->query($sql);
+		$row_cnt = $result->num_rows;
+		if($row_cnt > 0){
+			$sql_galeria = "DELETE FROM galeria WHERE obra=".$id;
+			if($db->query($sql_galeria)){ 	
+			 	while($row = $result->fetch_assoc()){
+			 		unlink($dir.$row['imagen']);
+			 	}
+			}
+		}
+
+		return $exist;
+
 	    $sql = "DELETE FROM obras WHERE id=".$id;
 	    
 	    $sql_imagen = "SELECT imagen from obras WHERE id=".$id;
 	    $dir_imagen = $db->query($sql_imagen);
-	    $dir="../../";
 	    $imagen=$dir_imagen->fetch_assoc();
 
 	    if ($db->query($sql_comments) === TRUE && $db->query($sql) === TRUE && unlink($dir.$imagen['imagen'])) {
@@ -37,4 +52,5 @@
 
 		return $exist;
 	}
+
 ?>
