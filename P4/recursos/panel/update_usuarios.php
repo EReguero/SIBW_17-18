@@ -43,13 +43,15 @@ if(is_valid_email($correo) && !empty($usuario)){
   }
 
   if(haySuperUsuarios($bd,$_POST['id']) ){
-   
-    $sql = "UPDATE usuarios SET usuario='$usuario', ".$pass." correo='$correo',tipo_usuario = $_POST[tipo_usuario],fecha_nacimiento = '$_POST[fecha_nacimiento]', biografia=\"".$_POST['biografia']."\" WHERE id=".$_POST['id'];
+    
+    $bio = addslashes($_POST['biografia']);
+
+    $sql = "UPDATE usuarios SET usuario='$usuario', ".$pass." correo='$correo',tipo_usuario = $_POST[tipo_usuario],fecha_nacimiento = '$_POST[fecha_nacimiento]', biografia= '$bio' WHERE id=".$_POST['id'];
 
     if ($bd->query($sql) === TRUE) {
       session_start();  
       $message="El perfil se ha actualizado correctamente.";
-      if($usuario === $_SESSION['username']){
+      if($usuario === $_SESSION['username'] && $_POST['tipo_usuario'] != $_SESSION['privilegios']){
         
         echo "<script type='text/javascript'>alert('El perfil se ha actualizado correctamente. Has modificado tus datos, debes volver a iniciar sesión por seguridad.');window.location.href='/logout.php';</script></script>";
         

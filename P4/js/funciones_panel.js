@@ -22,7 +22,6 @@ function showMove(id){
 
 }
 
-
 function changeColeccion(coleccion,obra_id,...colecciones){
 
  
@@ -80,6 +79,17 @@ function subida_form(id){
     h.setAttribute('name',"obra");
     h.setAttribute('value', id);
 
+
+    var fuente_label = document.createElement("label");
+    fuente_label.setAttribute('id','label_fuente');
+    fuente_label.innerHTML="Fuente: ";
+
+    var fuente = document.createElement("input");
+    fuente.setAttribute('type','text');
+    fuente.setAttribute('name', 'fuente');
+    fuente.setAttribute('id','fuente');
+    fuente.setAttribute('placeholder','Fuente');
+
     var s = document.createElement("input"); //input element, Submit button
     s.setAttribute('type',"submit");
     s.setAttribute('name',"enviar");
@@ -97,6 +107,8 @@ function subida_form(id){
     f.appendChild(m);
     d.appendChild(i);
     f.appendChild(h);
+    d.appendChild(fuente_label);
+    d.appendChild(fuente);
     d.appendChild(s);
     f.appendChild(d);
 

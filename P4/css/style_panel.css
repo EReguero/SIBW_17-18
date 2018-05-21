@@ -192,7 +192,6 @@
         background: transparent;
         border: none;
         margin-left: 245px;
-
         color: #4caf50;
         font-weight: bold;
     }
@@ -214,12 +213,16 @@
 
     #up_image{
         margin: 10px;
+        margin-left: 30px;
+    }
+
+    #label_fuente{
+        margin-left: 20px;
     }
     .send_image{
         background: #333;
-        border: dotted 1px #333;
-        margin-left: 125px;
-        margin-top: 25px;
+        margin-left: 265px;
+        margin-top: 26px;
         margin-bottom: 15px;
         border: none;
         color: white;

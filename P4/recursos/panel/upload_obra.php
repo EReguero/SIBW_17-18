@@ -19,9 +19,10 @@
         }
 
         $date = date("Y-m-d");
-        
+        $descripcion = addslashes($_POST['descripcion']);
+
         $sql = "INSERT INTO obras (titulo, autor, fecha, coleccion, imagen, fuente_imagen, descripcion, fecha_creacion, web_autor, biografia_autor)
-        VALUES ('$_POST[titulo]','$_POST[autor]','$_POST[fecha]','$_POST[coleccion]','$name_image', 'Guggenheim Bilbao','$_POST[descripcion]', '$date','$_POST[biografia]','$_POST[web]')";
+        VALUES ('$_POST[titulo]','$_POST[autor]','$_POST[fecha]','$_POST[coleccion]','$name_image', '$_POST[fuente]' ,'$descripcion', '$date','$_POST[biografia]','$_POST[web]')";
 
         if ($bd->query($sql) === TRUE) {
             $sql_id = "SELECT id FROM obras WHERE titulo= '$_POST[titulo]'";

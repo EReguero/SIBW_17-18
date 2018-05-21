@@ -36,8 +36,10 @@ function exist_email($str){
 }
 
 if(is_valid_email($correo) && !empty($usuario) && !$error_pass){
+
+  $bio = addslashes($_POST['biografia']);
  
-  $sql = "UPDATE usuarios SET usuario='$usuario', ".$pass." correo='$correo', fecha_nacimiento = '$_POST[fecha_nacimiento]', biografia='$_POST[biografia]' WHERE usuario='".$_SESSION['username']."'";
+  $sql = "UPDATE usuarios SET usuario='$usuario', ".$pass." correo='$correo', fecha_nacimiento = '$_POST[fecha_nacimiento]', biografia='$bio' WHERE usuario='".$_SESSION['username']."'";
 
   if ($bd->query($sql) === TRUE) {
     $_SESSION['username']=$usuario;

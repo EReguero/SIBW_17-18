@@ -19,7 +19,7 @@
         }
 
         if(!existeFotoEnBD($bd,$_FILES['imagen']['name'])){
-           $sql = "INSERT INTO galeria (imagen, obra) VALUES ('$name_image','$_POST[obra]')";
+           $sql = "INSERT INTO galeria (imagen, obra, fuente) VALUES ('$name_image','$_POST[obra]','$_POST[fuente])";
         
             if ($bd->query($sql) === TRUE) {
                 $message = "La imagen se ha subido correctamente.";
